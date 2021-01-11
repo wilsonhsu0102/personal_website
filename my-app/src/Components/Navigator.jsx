@@ -1,21 +1,23 @@
 import React from 'react';
 import '../Styles/Navigator.css'
-
+import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 class Navigator extends React.Component {
     render() {
         return (
-            <div id="navigator">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm"> About me </div>
-                        <div className="col-sm"> Education </div>
-                        <div className="col-sm"> Work Experience </div>
-                        <div className="col-sm"> Project </div>
-                        <div className="col-sm"> Skills </div>
-                        <div className="col-sm"> Contacts </div>
-                    </div>
-                </div>
-            </div>);
+            <Navbar id="navigator" collapseOnSelect expand="md" bg="dark" variant="dark" sticky="top">
+                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto" fill>
+                        <Nav.Link href="#about">About me</Nav.Link>
+                        <Nav.Link href="#education">Education</Nav.Link>
+                        <Nav.Link href="#experience">Work Experience</Nav.Link>
+                        <Nav.Link href="#project">Project</Nav.Link>
+                        <Nav.Link href="#skill">Skills</Nav.Link>
+                        <Nav.Link href="#contact">Contact Me</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>);
     }
 }
 
