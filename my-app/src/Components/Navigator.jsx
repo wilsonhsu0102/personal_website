@@ -9,7 +9,7 @@ class Navigator extends React.Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="m-auto" fill>
-                        <Nav.Link href="#about">Welcome</Nav.Link>
+                        <Nav.Link href="#welcome">Welcome</Nav.Link>
                         <Nav.Link href="#about">About me</Nav.Link>
                         <Nav.Link href="#education">Education</Nav.Link>
                         <Nav.Link href="#experience">Work Experience</Nav.Link>
