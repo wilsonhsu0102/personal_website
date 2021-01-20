@@ -1,0 +1,28 @@
+#workExperience {
+    height: 100%;
+    background-color: white;
+}
+
+.container-exp {
+    width: 70%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.title {
+    justify-content: center;
+    font-size: 5vw;
+    border-bottom: 0.3vw solid black;
+}
+
+.content {
+    padding-top: 5%;
+}
+@media only screen and (min-width: 768px) {
+    .title {
+        font-size: 3.5vw;
+        justify-content: left;
+    }
+}

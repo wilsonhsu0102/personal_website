@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/AboutMe.css'
-import { Image, Container, Row, Col } from 'react-bootstrap'
+import { Image, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
@@ -13,9 +13,10 @@ class AboutMe extends React.Component {
                         <Row><Image className="profile-pic" src="Resources/Profile.Png" roundedCircle /></Row>
                         <Row>
                             <Col className="icon icon-first-row" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faInstagram} size="2x" /> </a></Col>
-                            <Col className="icon icon-first-row" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faFacebookF} size="2x" /> </a></Col>
+                            <Col className="icon icon-first-row" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faGithub} size="2x" /> </a></Col>
+                            <Col className="icon" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faFacebookF} size="2x" /> </a></Col>
                             <Col className="icon" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faLinkedinIn} size="2x" /> </a></Col>
-                            <Col className="icon" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faGithub} size="2x" /> </a></Col>
+                            
                         </Row>
                     </Col>
                     <Col className="descriptions" xs="12" md={{offset: 1, span: 8}}>
