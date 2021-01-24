@@ -8,18 +8,34 @@ class AboutMe extends React.Component {
     render() {
         return (
             <div id="about">
-                <Row className="info-box justify-content-center">
+                <Row className="about-info-box justify-content-center">
                     <Col xs="12" md="3">
-                        <Row><Image className="profile-pic" src="Resources/Profile.Png" roundedCircle /></Row>
+                        <Row><Image className="about-profile-pic" src="Resources/Profile.Png" roundedCircle /></Row>
                         <Row>
-                            <Col className="icon icon-first-row" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faInstagram} size="2x" /> </a></Col>
-                            <Col className="icon icon-first-row" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faGithub} size="2x" /> </a></Col>
-                            <Col className="icon" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faFacebookF} size="2x" /> </a></Col>
-                            <Col className="icon" xs="3" md="6"><a href="#" className="icon-effect"> <FontAwesomeIcon icon={faLinkedinIn} size="2x" /> </a></Col>
-                            
+                            <Col className="about-icon about-icon-first-row" xs="3" md="6">
+                                <a href="#" className="about-icon-effect">
+                                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                                </a>
+                            </Col>
+                            <Col className="about-icon about-icon-first-row" xs="3" md="6">
+                                <a href="#" className="about-icon-effect">
+                                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                                </a>
+                            </Col>
+                            <Col className="about-icon" xs="3" md="6">
+                                <a href="#" className="about-icon-effect">
+                                    <FontAwesomeIcon icon={faFacebookF} size="2x" />
+                                </a>
+                            </Col>
+                            <Col className="about-icon" xs="3" md="6">
+                                <a href="#" className="about-icon-effect">
+                                    <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+                                </a>
+                            </Col>
+
                         </Row>
                     </Col>
-                    <Col className="descriptions" xs="12" md={{offset: 1, span: 8}}>
+                    <Col className="about-descriptions" xs="12" md={{ offset: 1, span: 8 }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit.
                         Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio.
                         Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend

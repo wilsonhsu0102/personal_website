@@ -1,20 +1,20 @@
 #about {
-    background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url('../Resources/wood_bg.jpg');
+    background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),url('../Resources/wood_bg.jpg');
     background-size: cover;
     padding-top: 10%;
     padding-bottom: 10%;
 }
 
-.profile-pic {
+.about-profile-pic {
     width: 100%;
 }
 
-.icon-effect {
+.about-icon-effect {
     color:inherit;
     text-decoration: none;
 }
 
-.info-box {
+.about-info-box {
     margin: 0 auto;
     padding: 5% 3%;
     width: 70%;
@@ -24,17 +24,17 @@
     background-color: rgba(220, 220, 220, 0.8);
 }
 
-.descriptions {
+.about-descriptions {
     color: black;
     margin-top: 10%;
 }
 
-.icon {
+.about-icon {
     padding-top: 10%;
 }
 
 @media only screen and (min-width: 768px) {
-    .descriptions {
+    .about-descriptions {
         margin-top: 0%;
     }
 }

@@ -1,28 +1,35 @@
-#workExperience {
+#experience {
     height: 100%;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
-.container-exp {
+.experience-container {
     width: 70%;
     padding-top: 5%;
     padding-bottom: 5%;
-    border-bottom: 1px solid lightgray;
-
 }
 
-.title {
-    justify-content: center;
+.experience-title {
+    text-align: center;
     font-size: 5vw;
-    border-bottom: 0.3vw solid black;
 }
 
-.content {
+.experience-horizontal-line {
+    border-bottom: 0.4vw double black;
+    height: 64%;
+}
+
+.experience-content {
     padding-top: 5%;
 }
+
+.experience-border-divider {
+    border-bottom: 2px solid lightgray;
+}
+
 @media only screen and (min-width: 768px) {
-    .title {
+    .experience-title {
         font-size: 3.5vw;
-        justify-content: left;
+        text-align:left;
     }
 }
