@@ -7,10 +7,10 @@ class WorkExperience extends React.Component {
         return (
             <div id="experience">
                 <Container className="experience-container">
-                    <Row>
-                        <Col xs="3" md="1"> <div className="experience-horizontal-line"> </div> </Col>
-                        <Col className="experience-title" xs="6" md="auto"> Work Experience </Col>
-                        <Col xs="3" md="5"> <div className="experience-horizontal-line"> </div> </Col>
+                    <Row className="justify-content-center">
+                        <Col xs="3"> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col  xs="auto" className="experience-title"> Work Experience </Col>
+                        <Col xs="3"> <div className="experience-horizontal-line"> </div> </Col>
                     </Row>
                     <Row className="experience-content justify-content-center">
                         <Col xs="8" md="3"><Image className="about-profile-pic" src="Resources/Profile.Png" /></Col>

@@ -6,7 +6,6 @@ import Education from './Components/Education.jsx';
 import WorkExperience from './Components/WorkExperience.jsx';
 import Particles from 'react-particles-js';
 import "pathseg";
-import deerSVG from './Resources/small_deer.svg';
 
 function App() {
   return (
