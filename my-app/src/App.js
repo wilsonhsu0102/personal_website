@@ -4,6 +4,8 @@ import Welcome from './Components/Welcome.jsx';
 import AboutMe from './Components/AboutMe.jsx';
 import Education from './Components/Education.jsx';
 import WorkExperience from './Components/WorkExperience.jsx';
+import Project from './Components/Project.jsx';
+import Skill from './Components/Skill.jsx'
 import Particles from 'react-particles-js';
 import "pathseg";
 
@@ -15,8 +17,9 @@ function App() {
       <AboutMe />
       <Education />
       <WorkExperience />
-      <WorkExperience />
-      <div className="container22">
+      <Project />
+      <Skill />
+      <div className="container-22">
         <Particles
           className="particle-bg"
           params={{

@@ -8,9 +8,10 @@ class Education extends React.Component {
             <div id="education">
                 <Container className="education-container">
                     <Row className="justify-content-center">
-                        <Col xs="3"> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col xs={{offset: 0}} md={{offset: 1}}> <div className="experience-horizontal-line"> </div> </Col>
                         <Col xs="auto" className="education-title"> Education </Col>
-                        <Col xs="3"> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col xs="0" md="1"></Col>
                     </Row>
                     <Container className="education-description">
                         <Row>

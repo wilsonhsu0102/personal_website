@@ -1,12 +1,11 @@
 #experience {
     height: 100%;
-    background-color: rgb(245, 245, 245);
+    background-color: whitesmoke;
 }
 
 .experience-container {
     width: 70%;
     padding-top: 5%;
-    padding-bottom: 5%;
 }
 
 .experience-title {

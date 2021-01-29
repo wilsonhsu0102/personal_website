@@ -26,7 +26,7 @@ class AboutMe extends React.Component {
                                     "value": ["#d2ffff", "#d2d2ff", "#ffd2d2", "#ffffd2"]
                                 },
                                 "size": {
-                                    "value": 5,
+                                    "value": 8,
                                     "random": true,
                                     "anim": {
                                         "speed": 4,

@@ -1,15 +1,15 @@
 import React from 'react';
-import '../Styles/WorkExperience.css'
+import '../Styles/Project.css'
 import { Image, Container, Row, Col } from 'react-bootstrap'
 
-class WorkExperience extends React.Component {
+class Project extends React.Component {
     render() {
         return (
-            <div id="experience">
+            <div id="project">
                 <Container className="experience-container">
                     <Row className="justify-content-center">
                         <Col xs={{offset: 0}} md={{offset: 1}}> <div className="experience-horizontal-line"> </div> </Col>
-                        <Col xs="auto" className="experience-title"> Work Experience </Col>
+                        <Col xs="auto" className="experience-title"> Projects </Col>
                         <Col> <div className="experience-horizontal-line"> </div> </Col>
                         <Col xs="0" md="1"></Col>
                     </Row>
@@ -32,4 +32,4 @@ class WorkExperience extends React.Component {
     }
 }
 
-export default WorkExperience;
+export default Project;
