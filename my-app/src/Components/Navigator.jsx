@@ -12,8 +12,8 @@ class Navigator extends React.Component {
                         <Nav.Link href="#about">About me</Nav.Link>
                         <Nav.Link href="#education">Education</Nav.Link>
                         <Nav.Link href="#experience">Work Experience</Nav.Link>
-                        <Nav.Link href="#project">Project</Nav.Link>
                         <Nav.Link href="#skill">Skills</Nav.Link>
+                        <Nav.Link href="#project">Project</Nav.Link>
                         <Nav.Link href="#contact">Contact Me</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

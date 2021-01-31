@@ -4,6 +4,7 @@ import { Image, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import Particles from 'react-particles-js';
+import profilePic from '../Resources/Profile.png';
 
 class AboutMe extends React.Component {
     render() {
@@ -64,7 +65,7 @@ class AboutMe extends React.Component {
 
                 <Row className="about-info-box justify-content-center">
                     <Col xs="12" md="3">
-                        <Row><Image className="about-profile-pic" src="Resources/Profile.Png" roundedCircle /></Row>
+                        <Row><Image className="about-profile-pic" src={profilePic} roundedCircle /></Row>
                         <Row>
                             <Col className="about-icon about-icon-first-row" xs="3" md="6">
                                 <a href="#" className="about-icon-effect">

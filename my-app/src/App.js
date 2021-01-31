@@ -7,7 +7,6 @@ import WorkExperience from './Components/WorkExperience.jsx';
 import Project from './Components/Project.jsx';
 import Skill from './Components/Skill.jsx'
 import Particles from 'react-particles-js';
-import "pathseg";
 
 function App() {
   return (
@@ -17,8 +16,8 @@ function App() {
       <AboutMe />
       <Education />
       <WorkExperience />
-      <Project />
       <Skill />
+      <Project />
       <div className="container-22">
         <Particles
           className="particle-bg"

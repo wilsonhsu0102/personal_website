@@ -1,33 +1,70 @@
 import React from 'react';
-import '../Styles/Project.css'
-import { Image, Container, Row, Col } from 'react-bootstrap'
+import '../Styles/Project.css';
+import { Image, Container, Row, Col, ThemeProvider } from 'react-bootstrap';
+import { Spring, animated, config } from 'react-spring/renderprops';
+import screenShot from '../Resources/Screenshot.png';
+import List from './project_carousel.jsx';
+
+
+const data = [
+    {
+        name: 'Rare Wind',
+        color: 'black',
+        image: screenShot
+    },
+    {
+        name: 'Saint Petersburg',
+        color: 'blue',
+        image: screenShot
+    },
+    {
+        name: 'Deep Blue',
+        color: 'grey',
+        image: screenShot
+    },
+    {
+        name: 'Ripe Malinka',
+        color: 'pink',
+        image: screenShot
+    },
+    {
+        name: 'Near Moon',
+        color: 'green',
+        image: screenShot
+    }
+]
 
 class Project extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { data: data }
+    }
+
+    switch = () => {
+        let tmp = this.state.data;
+        tmp.push(tmp.shift())
+        this.setState({ data: tmp })
+    }
+
     render() {
+        let springs = this.state.data.map((d, i) => {
+            return (<Col>
+                <Spring config={config.slow} from={{ width: i * 20 }} to={{ width: (i + 1) * 50 }}>
+                    {props => (
+                        <animated.div className="project-item" style={{ backgroundColor: d.color, width: props.width }} onClick={this.switch}>
+                            {d.name}
+                        </animated.div>
+                    )}
+                </Spring>
+            </Col>)
+        })
         return (
             <div id="project">
-                <Container className="experience-container">
-                    <Row className="justify-content-center">
-                        <Col xs={{offset: 0}} md={{offset: 1}}> <div className="experience-horizontal-line"> </div> </Col>
-                        <Col xs="auto" className="experience-title"> Projects </Col>
-                        <Col> <div className="experience-horizontal-line"> </div> </Col>
-                        <Col xs="0" md="1"></Col>
+                <div className="project-carousel">
+                    <Row>
+                        {springs}
                     </Row>
-                    <Row className="experience-content justify-content-center">
-                        <Col xs="8" md="3"><Image className="about-profile-pic" src="Resources/Profile.Png" /></Col>
-                        <Col xs="12" md="9">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit.
-                            Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio.
-                            Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend
-                            feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec
-                            sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra
-                            ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida.
-                        </Col>
-                    </Row>
-                    <Row className="experience-content"> 
-                    <Col xs={{ offset: 3, span: 6 }} className="experience-border-divider"></Col>
-                    </Row>
-                </Container>
+                </div>
             </div>);
     }
 }

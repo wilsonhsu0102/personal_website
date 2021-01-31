@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/WorkExperience.css'
 import { Image, Container, Row, Col } from 'react-bootstrap'
+import profilePic from '../Resources/Profile.png';
 
 class WorkExperience extends React.Component {
     render() {
@@ -14,7 +15,7 @@ class WorkExperience extends React.Component {
                         <Col xs="0" md="1"></Col>
                     </Row>
                     <Row className="experience-content justify-content-center">
-                        <Col xs="8" md="3"><Image className="about-profile-pic" src="Resources/Profile.Png" /></Col>
+                        <Col xs="8" md="3"><Image className="about-profile-pic" src={profilePic} /></Col>
                         <Col xs="12" md="9">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit.
                             Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio.

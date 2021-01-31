@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/Education.css';
 import { Image, Container, Row, Col } from 'react-bootstrap'
+import UofTLogo from '../Resources/UofTLogo.png';
 
 class Education extends React.Component {
     render() {
@@ -16,7 +17,7 @@ class Education extends React.Component {
                     <Container className="education-description">
                         <Row>
                             <Col xs="12">
-                                <Image className="education-uoftlogo" src="Resources/UofTLogo.Png" />
+                                <Image className="education-uoftlogo" src={UofTLogo} />
                             </Col>
                         </Row>
                         <Row>
