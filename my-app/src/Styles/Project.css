@@ -1,16 +1,16 @@
 #project {
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     background: radial-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.9),  rgba(245, 245, 245, 0.8), rgba(255, 255, 255, 0.9));
 }
 
 .project-container {
-    height: 100%;
+    height: fit-content;
     width: 100%;
 }
 
 .project-title {
-    padding-top: 5%;
+    padding-top: 25%;
     margin: 0 auto;
     width: 70%;
 }
@@ -19,16 +19,20 @@
     position: relative;
     color: white;
     width: 100%;
-    height: 75%;
+    height: 80vh;
 }
 
 .carousel-text {
     color: white;
-    background-color: darkgray;
+    background-color: rgba(120, 120, 120, 0.8);
     border-radius: 25px;
     width: fit-content;
     margin: 0 auto;
     padding: 5px 15px;
+}
+
+.desktop-project-carousel {
+    padding-bottom: 10vh;
 }
 
 .project-mobile-carousel {
@@ -78,4 +82,16 @@
 
 .sm-carousel-image:hover {
     opacity: 1;
+}
+
+@media only screen and (min-width: 375px) {
+    .project-title {
+        padding-top: 15%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .project-title {
+        padding-top: 5%;
+    }
 }

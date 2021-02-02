@@ -56,6 +56,16 @@ class BigProjectCarousel extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.autoSpin = setInterval(() => {
+            this.spinLeft()
+        }, 5000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.autoSpin)
+    }
+
     spinLeft = () => {
         let lastRight = this.state.right
         let lastMain = this.state.main
@@ -81,6 +91,11 @@ class BigProjectCarousel extends React.Component {
             left: lastMain,
             right: nextRight
         })
+        this.props.slideChange(lastRight)
+        clearInterval(this.autoSpin)
+        this.autoSpin = setInterval(() => {
+            this.spinLeft()
+        }, 5000)
     }
 
     spinRight = () => {
@@ -108,6 +123,11 @@ class BigProjectCarousel extends React.Component {
             left: nextLeft,
             right: lastMain
         })
+        this.props.slideChange(lastLeft)
+        clearInterval(this.autoSpin)
+        this.autoSpin = setInterval(() => {
+            this.spinLeft()
+        }, 5000)
     }
 
     showModal = (idx) => {
@@ -134,7 +154,7 @@ class BigProjectCarousel extends React.Component {
                     {props => (
                         <animated.div className={"project-item " + d.display} style={props} onClick={i === this.state.main ? () => this.props.showModal(i) : clickFunc}>
                             <Image className="project-item-image" src={d.image} />
-                            <div className="carousel-text" style={i === this.state.main ? {backgroundColor: 'rgb(100, 100, 100)'} : {}}>
+                            <div className="carousel-text" style={i !== this.state.main ? {backgroundColor: 'rgb(169, 169, 169)'} : {}}>
                                 {d.name}, {d.display}
                             </div>
                         </animated.div>
@@ -142,7 +162,7 @@ class BigProjectCarousel extends React.Component {
                 </Spring>)
         })
         return (
-            <div>
+            <div className="desktop-project-carousel">
                 {carousel}
             </div>);
     }

@@ -18,7 +18,7 @@
     color: black;
     font-size: 40px;
     width: 70%;
-    padding-top: 5%;
+    padding-top: 25%;
     padding-bottom: 5%;
 }
 
@@ -26,6 +26,12 @@
     font-size: 3vw;
     /* border: 5px solid gray; */
     /* box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5), inset 0 6px 20px 0 rgba(0, 0, 0, 0.5); */
+}
+
+@media only screen and (min-width: 375px) {
+    .education-container {
+        padding-top: 15%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -42,6 +48,10 @@
 
     .education-uoftlogo {
         width: 70%;
+    }
+
+    .education-container {
+        padding-top: 5%;
     }
 }
 

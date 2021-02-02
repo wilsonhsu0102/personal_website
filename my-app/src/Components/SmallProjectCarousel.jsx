@@ -22,7 +22,7 @@ class SmallProjectCarousel extends React.Component {
         })
         return (
             <div className="project-mobile-carousel">
-                <Carousel activeIndex={this.props.displayIdx} prevIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleLeft} size="3x" />}
+                <Carousel onSelect={(eventKey) => {this.props.slideChange(eventKey)}} defaultActiveIndex={this.props.startIdx} prevIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleLeft} size="3x" />}
                     nextIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleRight} size="3x" />}>
                     {carouselItems}
                 </Carousel>

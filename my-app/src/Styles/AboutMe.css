@@ -1,7 +1,7 @@
 #about {
     background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),url('../Resources/wood_bg.jpg');
     background-size: cover;
-    padding-top: 10%;
+    padding-top: 20%;
     padding-bottom: 10%;
     position:relative;
     height:100%;
@@ -48,6 +48,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+    #about {
+        padding-top: 10%;
+    }
+
     .about-descriptions {
         margin-top: 0%;
     }

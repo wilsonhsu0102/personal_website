@@ -5,7 +5,7 @@
 
 .experience-container {
     width: 70%;
-    padding-top: 5%;
+    padding-top: 25%;
 }
 
 .experience-title {
@@ -26,9 +26,19 @@
     border-bottom: 2px solid lightgray;
 }
 
+@media only screen and (min-width: 375px) {
+    .experience-container {
+        padding-top: 15%;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .experience-title {
         font-size: 3.5vw;
         text-align:left;
+    }
+
+    .experience-container {
+        padding-top: 5%;
     }
 }
