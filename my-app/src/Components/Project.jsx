@@ -1,93 +1,72 @@
 import React from 'react';
 import '../Styles/Project.css';
-import { Image, Modal, Button } from 'react-bootstrap';
-import { Spring, animated, config } from 'react-spring/renderprops';
+import { Container, Row, Col, Modal } from 'react-bootstrap';
+import SmallProjectCarousel from './SmallProjectCarousel.jsx';
+import BigProjectCarousel from './BigProjectCarousel.jsx';
 import screenShot from '../Resources/Screenshot.png';
 import screenShot2 from '../Resources/Screenshot2.png';
-import List from './project_carousel.jsx';
-
+import CarouselGallery from './CarouselGallery.jsx';
 
 const data = [
     {
         name: 'Rare Wind',
         display: 'project-main',
         color: 'black',
-        image: 'Screenshot2'
+        image: 'Screenshot2',
+        modal: {
+            images: ['Screenshot2', 'Screenshot'],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."
+        }
     },
     {
         name: 'Saint Petersburg',
         display: 'project-right',
         color: 'blue',
-        image: 'Screenshot'
+        image: 'Screenshot',
+        modal: {
+            images: ['Screenshot2', 'Screenshot'],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."
+        }
     },
     {
         name: 'Deep Blue',
         display: 'project-none',
         color: 'grey',
-        image: 'Screenshot'
+        image: 'Screenshot',
+        modal: {
+            images: ['Screenshot2', 'Screenshot'],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."
+        }
     },
     {
         name: 'Ripe Malinka',
         display: 'project-none',
         color: 'pink',
-        image: 'Screenshot'
+        image: 'Screenshot',
+        modal: {
+            images: ['Screenshot2', 'Screenshot'],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."
+        }
     },
     {
         name: 'Near Moon',
         display: 'project-left',
         color: 'green',
-        image: 'Screenshot'
+        image: 'Screenshot',
+        modal: {
+            images: ['Screenshot2', 'Screenshot'],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."
+        }
     }
 ]
 
-const position = {
-    'project-main': {
-        width: '50%',
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        zIndex: 3,
-        opacity: 0.8
-    },
-    'project-left': {
-        width: '25%',
-        top: "50%",
-        left: "12.5%",
-        transform: "translate(-50%, -50%)",
-        zIndex: 1,
-        opacity: 0.3
-    },
-    'project-right': {
-        width: '25%',
-        top: "50%",
-        left: "87.5%",
-        transform: "translate(-50%, -50%)",
-        zIndex: 1,
-        opacity: 0.3
-    },
-    'project-none': {
-        width: '20%',
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        zIndex: 0,
-        opacity: 0
-    }
-}
-
-const customConfig = {
-    mass: 10,
-    tension: 300,
-    friction: 100
-}
 class Project extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            screenWidth: window.innerWidth,
             modalShow: false,
-            main: 0,
-            left: data.length - 1,
-            right: 1,
+            displayIdx: 0,
             data: data.map(d => {
                 if (d.image === "Screenshot2") {
                     d.image = screenShot2
@@ -99,133 +78,52 @@ class Project extends React.Component {
         }
     }
 
-    handleClose = () => this.setState({ modalShow: false });
-
-    handleShow = () => this.setState({ modalShow: true });
-
-    spinLeft = () => {
-        let lastRight = this.state.right
-        let lastMain = this.state.main
-        let nextRight
-        let tmp = this.state.data.map((d, i) => {
-            if (i === this.state.main) {
-                d.display = "project-left"
-            } else if (i === this.state.left) {
-                d.display = "project-none"
-            } else if (i === this.state.right) {
-                d.display = "project-main"
-            }
-
-            if (i - 1 === this.state.right || (i == 0 && data.length - 1 === this.state.right)) {
-                d.display = "project-right"
-                nextRight = i
-            }
-            return d
-        });
-        this.setState({
-            data: tmp,
-            main: lastRight,
-            left: lastMain,
-            right: nextRight
-        })
+    componentDidMount() {
+        window.addEventListener('resize', this.resize)
     }
 
-    spinRight = () => {
-        let lastLeft = this.state.left
-        let lastMain = this.state.main
-        let nextLeft
-        let tmp = this.state.data.map((d, i) => {
-            if (i === this.state.main) {
-                d.display = "project-right"
-            } else if (i === this.state.left) {
-                d.display = "project-main"
-            } else if (i === this.state.right) {
-                d.display = "project-none"
-            }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resize)
+    }
 
-            if (i + 1 === this.state.left || (i === data.length - 1 && 0 === this.state.left)) {
-                d.display = "project-left"
-                nextLeft = i
-            }
-            return d
-        });
+    resize = () => this.setState({ screenWidth: window.innerWidth })
+
+    handleClose = () => this.setState({ modalShow: false });
+
+    handleShow = (idx) => {
         this.setState({
-            data: tmp,
-            main: lastLeft,
-            left: nextLeft,
-            right: lastMain
-        })
+            modalShow: true,
+            displayIdx: idx
+        });
     }
 
     render() {
-        let springs = this.state.data.map((d, i) => {
-            let nextPos;
-            if (i === this.state.main) {
-                nextPos = position["project-main"];
-                return (<Spring key={i} config={customConfig} to={nextPos}>
-                    {props => (
-                        <animated.div className={"project-item " + d.display} style={props} onClick={this.handleShow}>
-                            <Image className="project-item-image" src={d.image} />
-                            {d.name}, {d.display}
-                        </animated.div>
-                    )}
-                </Spring>)
-            } else if (i === this.state.left) {
-                nextPos = position["project-left"];
-                return (<Spring key={i} config={customConfig} to={nextPos}>
-                    {props => (
-                        <animated.div className={"project-item " + d.display} style={props} onClick={this.spinRight}>
-                            <Image className="project-item-image" src={d.image} />
-                            {d.name}, {d.display}
-                        </animated.div>
-                    )}
-                </Spring>)
-            } else if (i === this.state.right) {
-                nextPos = position["project-right"];
-                return (
-                    <Spring key={i} config={customConfig} to={nextPos}>
-                        {props => (
-                            <animated.div className={"project-item " + d.display} style={props} onClick={this.spinLeft}>
-                                <Image className="project-item-image" src={d.image} />
-                                {d.name}, {d.display}
-                            </animated.div>
-                        )}
-                    </Spring>)
-            } else {
-                nextPos = position["project-none"];
-                return (
-                    <Spring key={i} config={customConfig} to={nextPos}>
-                        {props => (
-                            <animated.div className={"project-item " + d.display} style={props} onClick={this.switch}>
-                                <Image className="project-item-image" src={d.image} />
-                                {d.name}, {d.display}
-                            </animated.div>
-                        )}
-                    </Spring>)
-            }
-        })
+        let carousel = this.state.screenWidth < 768 ? <SmallProjectCarousel data={this.state.data} startIdx={this.state.displayIdx} showModal={this.handleShow} /> : <BigProjectCarousel data={this.state.data} startIdx={this.state.displayIdx} showModal={this.handleShow} />
+        let displayElement = this.state.data[this.state.displayIdx]
         let modal =
-            (<Modal show={this.state.modalShow} onHide={this.handleClose}>
+            (<Modal size="md" show={this.state.modalShow} onHide={this.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>{displayElement.name}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>{data[this.state.main].name}</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={this.handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={this.handleClose}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
+                <Modal.Body>
+                    <CarouselGallery images={displayElement.modal.images} />
+                    <div>
+                        {displayElement.modal.description}
+                    </div>
+                </Modal.Body>
             </Modal>)
         return (
             <div id="project">
-                <div className="project-carousel">
-                    {springs}
-                    {modal}
-                </div>
-                
+                    <Row className="justify-content-center project-title" noGutters={true}>
+                        <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col xs="auto" className="education-title"> Project </Col>
+                        <Col> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col xs="0" md="1"></Col>
+                    </Row>
+                    <Row className="project-carousel" noGutters={true}>
+                        {carousel}
+                        {modal}
+                    </Row>
             </div>);
     }
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 import '../Styles/Welcome.css'
 import Typed from "react-typed";
-import Particles from 'react-particles-js';
-import "pathseg";
 
 // Two problem, we cannot use the import svg and canvas size.
 class Welcome extends React.Component {

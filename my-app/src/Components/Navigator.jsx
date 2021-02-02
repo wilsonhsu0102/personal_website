@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Navigator.css'
-import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 class Navigator extends React.Component {
     render() {
         return (

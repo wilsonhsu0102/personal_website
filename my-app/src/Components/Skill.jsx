@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Skill.css';
-import { Image, Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 class Skill extends React.Component {
     render() {
@@ -9,7 +9,7 @@ class Skill extends React.Component {
                 <Container className="experience-container">
                     <Row className="justify-content-center">
                         <Col xs={{offset: 0}} md={{offset: 1}}> <div className="experience-horizontal-line"> </div> </Col>
-                        <Col xs="auto" className="experience-title"> Skills </Col>
+                        <Col xs="auto" className="experience-title"> Skill </Col>
                         <Col> <div className="experience-horizontal-line"> </div> </Col>
                         <Col xs="0" md="1"></Col>
                     </Row>
