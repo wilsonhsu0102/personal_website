@@ -47,6 +47,30 @@
     padding-top: 10%;
 }
 
+.about-resume {
+    padding-top: 10%;
+}
+
+.about-resume-btn {
+    padding: 1% 30%;
+    background-image: linear-gradient(to right,rgba(128, 0, 32, 0), rgba(128, 0, 32, 0.1), rgba(128, 0, 32, 0.4), rgba(128, 0, 32, 0.8), rgb(128, 0, 32), rgba(128, 0, 32, 0.8), rgba(128, 0, 32, 0.4), rgba(128, 0, 32, 0.1), rgba(128, 0, 32, 0));
+    background-color: transparent;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 0%;
+}
+
+.about-resume-btn:hover {
+    background-image: linear-gradient(to right,rgba(128, 0, 32, 0.2), rgba(128, 0, 32, 0.7), rgb(128, 0, 32), rgba(128, 0, 32, 0.7), rgba(128, 0, 32, 0.2));
+    background-color: transparent;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
 @media only screen and (min-width: 768px) {
     #about {
         padding-top: 10%;
