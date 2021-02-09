@@ -8,13 +8,13 @@ class Navigator extends React.Component {
                 <Navbar.Toggle className="navbar-toggle-color" aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="m-auto" fill>
-                        <Nav.Link href="#welcome">Welcome</Nav.Link>
-                        <Nav.Link href="#about">About me</Nav.Link>
-                        <Nav.Link href="#education">Education</Nav.Link>
-                        <Nav.Link href="#experience">Work Experience</Nav.Link>
-                        <Nav.Link href="#skill">Skills</Nav.Link>
-                        <Nav.Link href="#project">Project</Nav.Link>
-                        <Nav.Link href="#contact">Contact Me</Nav.Link>
+                        <Nav.Link href="#welcome"><div className="navbar-block">Welcome<div className="navbar-underline"></div></div></Nav.Link>
+                        <Nav.Link href="#about"><div className="navbar-block">About me<div className="navbar-underline"></div></div></Nav.Link>
+                        <Nav.Link href="#education"><div className="navbar-block">Education<div className="navbar-underline"></div></div></Nav.Link>
+                        <Nav.Link href="#experience"><div className="navbar-block">Work Experience<div className="navbar-underline"></div></div></Nav.Link>
+                        <Nav.Link href="#skill"><div className="navbar-block">Skills<div className="navbar-underline"></div></div></Nav.Link>
+                        <Nav.Link href="#project"><div className="navbar-block">Project<div className="navbar-underline"></div></div></Nav.Link>
+                        <Nav.Link href="#contact"><div className="navbar-block">Contact Me<div className="navbar-underline"></div></div></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>);

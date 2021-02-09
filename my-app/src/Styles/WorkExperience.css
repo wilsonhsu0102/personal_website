@@ -13,9 +13,20 @@
     font-size: 5vw;
 }
 
-.experience-horizontal-line {
-    border-bottom: 0.4vw double black;
-    height: 64%;
+.title-horizontal-right {
+    height: 0.4vw;
+    position: absolute; 
+    width: calc(100% - 30px);
+    top: 55%;
+    background-image: linear-gradient(to right, red, rgb(200, 0, 0), black);
+}
+
+.title-horizontal-left {
+    height: 0.4vw;
+    position: absolute; 
+    width: calc(100% - 30px);
+    top: 55%;
+    background-image: linear-gradient(to left, red, rgb(200, 0, 0), black);
 }
 
 .experience-content {

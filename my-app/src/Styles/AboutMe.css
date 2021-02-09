@@ -25,6 +25,12 @@
 .about-icon-effect {
     color:inherit;
     text-decoration: none;
+    transition-duration: 0.6s;
+}
+
+.about-icon-effect:hover {
+    color: red;
+    transition-duration: 0.3s;
 }
 
 .about-info-box {
@@ -53,22 +59,23 @@
 
 .about-resume-btn {
     padding: 1% 30%;
-    background-image: linear-gradient(to right,rgba(128, 0, 32, 0), rgba(128, 0, 32, 0.1), rgba(128, 0, 32, 0.4), rgba(128, 0, 32, 0.8), rgb(128, 0, 32), rgba(128, 0, 32, 0.8), rgba(128, 0, 32, 0.4), rgba(128, 0, 32, 0.1), rgba(128, 0, 32, 0));
     background-color: transparent;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    background-image: linear-gradient(to right,rgba(60, 50, 50, 0.2), rgba(60, 50, 50, 0.7), rgb(60, 50, 50), rgba(60, 50, 50, 0.7), rgba(60, 50, 50, 0.2));
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 0%;
+    transition-duration: 0.6s;
 }
 
 .about-resume-btn:hover {
-    background-image: linear-gradient(to right,rgba(128, 0, 32, 0.2), rgba(128, 0, 32, 0.7), rgb(128, 0, 32), rgba(128, 0, 32, 0.7), rgba(128, 0, 32, 0.2));
-    background-color: transparent;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    background-color: rgb(60, 50, 50);
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     border-left-color: transparent;
     border-right-color: transparent;
+    transition-duration: 0.3s;
 }
 
 @media only screen and (min-width: 768px) {

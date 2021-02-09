@@ -119,9 +119,9 @@ class Project extends React.Component {
         return (
             <div id="project">
                 <Row className="justify-content-center project-title">
-                    <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="experience-horizontal-line"> </div> </Col>
+                    <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-right"> </div> </Col>
                     <Col xs="auto" className="education-title"> Project </Col>
-                    <Col> <div className="experience-horizontal-line"> </div> </Col>
+                    <Col> <div className="title-horizontal-left"> </div> </Col>
                     <Col xs="0" md="1"></Col>
                 </Row>
                 <Row className="project-carousel" noGutters={true}>

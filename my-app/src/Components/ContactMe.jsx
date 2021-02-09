@@ -1,6 +1,7 @@
 import Particles from 'react-particles-js';
 import React from 'react';
 import '../Styles/ContactMe.css';
+import ParticlesConfig from '../Resources/contact-particle-config.json';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -15,49 +16,7 @@ class ContactMe extends React.Component {
                     <Particles
                         className="particle-bg"
                         canvasClassName="about-particle-behind"
-                        params={{
-                            "particles": {
-                                "number": {
-                                    "value": 200,
-                                    "density": {
-                                        "enable": true,
-                                        "value_area": 800
-                                    }
-                                },
-                                "line_linked": {
-                                    "enable": false,
-                                    "opacity": 0.02
-                                },
-                                "move": {
-                                    "direction": "random",
-                                    "speed": 0.5
-                                },
-                                "size": {
-                                    "value": 1
-                                },
-                                "opacity": {
-                                    "anim": {
-                                        "enable": true,
-                                        "speed": 1.2,
-                                        "opacity_min": 0.05
-                                    }
-                                }
-                            },
-                            "interactivity": {
-                                "events": {
-                                    "onclick": {
-                                        "enable": true,
-                                        "mode": "push"
-                                    }
-                                },
-                                "modes": {
-                                    "push": {
-                                        "particles_nb": 1
-                                    }
-                                }
-                            },
-                            "retina_detect": true
-                        }} />
+                        params={ParticlesConfig} />
                 </div>
 
                 <Container className="contact-container">
@@ -120,7 +79,7 @@ class ContactMe extends React.Component {
                             <Row className="contact-form-row contact-msg-send">
                                 <Button className="contact-send-btn" variant="primary" type="submit">
                                     Send
-                            </Button>
+                                </Button>
                             </Row>
 
                         </Col>

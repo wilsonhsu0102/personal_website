@@ -80,13 +80,29 @@
 
 .contact-send-btn {
     padding: 20% 70%;
-    background-color: rgb(128, 0, 32);
-    border-color: transparent;
+    background-color: black;
+    border-color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
 }
 
 .contact-send-btn:hover {
-    background-color: rgb(104, 0, 26);
-    border-color: black;
+    background-color: black;
+    border-color: red;
+    transition-duration: 0.3s;
+}
+
+input, textarea {
+    outline: none !important;
+    border:1px solid transparent !important;
+    box-shadow: 0 0 0 black !important;
+    transition-duration: 0.5s;
+}
+
+input:focus, textarea:focus {
+    outline: none !important;
+    border:1px solid red !important;
+    box-shadow: 0 0 10px #ff2525 !important;
+    transition-duration: 0.2s;
 }
 
 @media only screen and (min-width: 768px) {

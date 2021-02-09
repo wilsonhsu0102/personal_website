@@ -9,9 +9,9 @@ class WorkExperience extends React.Component {
             <div id="experience">
                 <Container className="experience-container">
                     <Row className="justify-content-center">
-                        <Col xs={{offset: 0}} md={{offset: 1}}> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col xs={{offset: 0}} md={{offset: 1}}> <div className="title-horizontal-right"> </div> </Col>
                         <Col xs="auto" className="experience-title"> Work Experience </Col>
-                        <Col> <div className="experience-horizontal-line"> </div> </Col>
+                        <Col> <div className="title-horizontal-left"> </div> </Col>
                         <Col xs="0" md="1"></Col>
                     </Row>
                     <Row className="experience-content justify-content-center">

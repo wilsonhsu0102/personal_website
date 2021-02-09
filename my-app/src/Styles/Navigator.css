@@ -2,6 +2,36 @@
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));;
 }
 
+.navbar-block {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nav-link {
+    transition-duration: 0.6s;
+}
+
+.nav-link:hover {
+    transition-duration: 0.3s;
+}
+
+.nav-link > .navbar-block > .navbar-underline {
+    height: 1px;
+    background-color: black;
+    transition-duration: 0.6s;
+}
+
+.nav-link:hover > .navbar-block > .navbar-underline {
+    height: 1px;
+    background-color:rgba(255, 0, 0, 0.6);
+    transition-duration: 0.3s;
+}
+
+.active > .navbar-block > .navbar-underline {
+    height: 1px;
+    background-color:red !important;
+}
+
 @media only screen and (min-width: 768px) {
     .navbar-color {
         background: linear-gradient(to right,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
