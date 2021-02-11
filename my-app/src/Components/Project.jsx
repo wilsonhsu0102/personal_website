@@ -117,16 +117,22 @@ class Project extends React.Component {
                 </Modal.Body>
             </Modal>)
         return (
-            <div id="project">
+            <div id="project" className="page-div">
                 <Row className="justify-content-center project-title">
-                    <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-right"> </div> </Col>
-                    <Col xs="auto" className="education-title"> Project </Col>
-                    <Col> <div className="title-horizontal-left"> </div> </Col>
+                    <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-left"> </div> </Col>
+                    <Col xs="auto" className="section-title"> Project </Col>
+                    <Col> <div className="title-horizontal-right"> </div> </Col>
                     <Col xs="0" md="1"></Col>
                 </Row>
                 <Row className="project-carousel" noGutters={true}>
                     {carousel}
                     {modal}
+                </Row>
+                <Row className="justify-content-center project-end">
+                    <Col xs={{ offset: 0 }} md={{ offset: 1 }}>
+                        <div className="end-horizontal"> </div>
+                    </Col>
+                    <Col xs="0" md="1"></Col>
                 </Row>
             </div>);
     }

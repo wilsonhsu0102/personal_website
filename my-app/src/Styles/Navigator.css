@@ -17,7 +17,7 @@
 
 .nav-link > .navbar-block > .navbar-underline {
     height: 1px;
-    background-color: black;
+    background-color: transparent;
     transition-duration: 0.6s;
 }
 

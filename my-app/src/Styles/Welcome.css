@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
 #welcome {
     height: 100vh;
 }
@@ -5,12 +7,14 @@
 .welcome-text {
     color: white;
     font-size: 5vw;
-    font-weight:bold;
+    font-family: 'Frijole', cursive;
+    /* font-weight:bold; */
     border-bottom: 0.3vw solid white;
 }
 
 .welcome-looped-text {
     font-size: 3vw;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .welcome-center {

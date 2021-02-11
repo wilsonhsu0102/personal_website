@@ -12,13 +12,12 @@ class ContactMe extends React.Component {
         let currentYear = new Date().getFullYear();
         return (
             <div id="contact">
-                <div className="contact-particle">
+                <div className="particle-div">
                     <Particles
                         className="particle-bg"
-                        canvasClassName="about-particle-behind"
+                        canvasClassName="particle-behind"
                         params={ParticlesConfig} />
                 </div>
-
                 <Container className="contact-container">
                     <Row>
                         <Col xs="12" md="5">
@@ -47,8 +46,12 @@ class ContactMe extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xs="12" md="1">
-                            <div className="contact-horizontal-line"> </div> <div className="contact-or">or</div> <div className="contact-horizontal-line"> </div>
+                        <Col className="contact-or-col" xs="12" md="1">
+                            <Row noGutters>
+                                <Col xs={{span: 3, offset: 2}} md={{span: 3, offset: 0}} className="contact-horizontal-line"></Col>
+                                <Col xs="2" md="6">or</Col>
+                                <Col xs="3" md="3" className="contact-horizontal-line"></Col>
+                            </Row>
                         </Col>
                         <Col xs="12" md="6">
                             <Row className="justify-content-center">Leave me a message</Row>

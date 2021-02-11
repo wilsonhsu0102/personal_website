@@ -5,12 +5,12 @@ import { Container, Row, Col } from 'react-bootstrap'
 class Skill extends React.Component {
     render() {
         return (
-            <div id="skill">
+            <div id="skill" className="page-div">
                 <Container className="experience-container">
                     <Row className="justify-content-center">
-                        <Col xs={{offset: 0}} md={{offset: 1}}> <div className="title-horizontal-right"> </div> </Col>
-                        <Col xs="auto" className="experience-title"> Skill </Col>
-                        <Col> <div className="title-horizontal-left"> </div> </Col>
+                        <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-left"> </div> </Col>
+                        <Col xs="auto" className="section-title"> Skill </Col>
+                        <Col> <div className="title-horizontal-right"> </div> </Col>
                         <Col xs="0" md="1"></Col>
                     </Row>
                     <Row className="experience-content justify-content-center">
@@ -23,8 +23,14 @@ class Skill extends React.Component {
                             ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida.
                         </Col>
                     </Row>
-                    <Row className="experience-content"> 
-                    <Col xs={{ offset: 3, span: 6 }} className="experience-border-divider"></Col>
+                    <Row className="experience-content">
+                        <Col xs={{ offset: 3, span: 6 }} className="border-divider"></Col>
+                    </Row>
+                    <Row className="justify-content-center end-row">
+                        <Col xs={{ offset: 0 }} md={{ offset: 1 }}>
+                            <div className="end-horizontal"> </div>
+                        </Col>
+                        <Col xs="0" md="1"></Col>
                     </Row>
                 </Container>
             </div>

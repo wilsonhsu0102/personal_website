@@ -1,21 +1,15 @@
 #about {
     background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),url('../Resources/wood_bg.jpg');
     background-size: cover;
-    padding-top: 20%;
-    padding-bottom: 10%;
     position:relative;
-    height:100%;
 }
 
-.about-particle {
-    position: absolute;
-    margin-top: -10%;
-    width:100%;
-    height:100%;
+.about-title {
+    font-size: 10vw !important;
 }
 
-.about-particle-behind {
-    z-index: -1
+.about-title-row {
+    padding-bottom: 5%;
 }
 
 .about-profile-pic {
@@ -36,7 +30,7 @@
 .about-info-box {
     position: relative;
     margin: 0 auto;
-    padding: 5% 3%;
+    padding: 2% 3% 5% 3%;
     width: 70%;
     height: 100%;
     border-radius: 5px;
@@ -57,7 +51,7 @@
     padding-top: 10%;
 }
 
-.about-resume-btn {
+.about-resume-btn, .about-resume-btn:focus{
     padding: 1% 30%;
     background-color: transparent;
     background-image: linear-gradient(to right,rgba(60, 50, 50, 0.2), rgba(60, 50, 50, 0.7), rgb(60, 50, 50), rgba(60, 50, 50, 0.7), rgba(60, 50, 50, 0.2));
@@ -67,6 +61,7 @@
     border-right-color: transparent;
     border-radius: 0%;
     transition-duration: 0.6s;
+    box-shadow: 0 0 0 #000000 !important;
 }
 
 .about-resume-btn:hover {
@@ -76,12 +71,18 @@
     border-left-color: transparent;
     border-right-color: transparent;
     transition-duration: 0.3s;
+    outline: none !important;
+    box-shadow: 0 0 10px #ff2525 !important;
 }
 
 @media only screen and (min-width: 768px) {
-    #about {
-        padding-top: 10%;
+    .about-title-row {
+        padding-bottom: 2%;
     }
+
+    .about-title {
+        font-size: 3.5vw !important;
+    }    
 
     .about-descriptions {
         margin-top: 0%;

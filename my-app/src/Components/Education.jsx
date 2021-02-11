@@ -6,12 +6,12 @@ import UofTLogo from '../Resources/UofTLogo.png';
 class Education extends React.Component {
     render() {
         return (
-            <div id="education">
+            <div id="education" className="page-div">
                 <Container className="education-container">
                     <Row className="justify-content-center">
-                        <Col xs={{offset: 0}} md={{offset: 1}}> <div className="title-horizontal-right"> </div> </Col>
-                        <Col xs="auto" className="education-title"> Education </Col>
-                        <Col> <div className="title-horizontal-left"> </div> </Col>
+                        <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-left"> </div> </Col>
+                        <Col xs="auto" className="section-title"> Education </Col>
+                        <Col> <div className="title-horizontal-right"> </div> </Col>
                         <Col xs="0" md="1"></Col>
                     </Row>
                     <Container className="education-description">
@@ -31,6 +31,12 @@ class Education extends React.Component {
                             </Col>
                         </Row>
                     </Container>
+                    <Row className="justify-content-center end-row">
+                        <Col xs={{ offset: 0 }} md={{ offset: 1 }}>
+                            <div className="end-horizontal"> </div>
+                        </Col>
+                        <Col xs="0" md="1"></Col>
+                    </Row>
                 </Container>
             </div>
         );

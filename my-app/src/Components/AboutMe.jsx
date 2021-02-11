@@ -11,14 +11,15 @@ class AboutMe extends React.Component {
     render() {
         return (
             <div id="about">
-                <div className="about-particle">
+                <div className="particle-div">
                     <Particles
                         className="particle-bg"
-                        canvasClassName="about-particle-behind"
+                        canvasClassName="particle-behind"
                         params={ParticlesConfig} />
                 </div>
-
+                <div className="page-div">
                 <Row className="about-info-box justify-content-center">
+                    <Col className="about-title-row" xs={{ span: 12 }}><div className="section-title about-title">About Me</div></Col>
                     <Col xs={{ span: 12 }} md={{ span: 3 }}>
                         <Row><Image className="about-profile-pic" src={profilePic} roundedCircle /></Row>
                         <Row>
@@ -66,6 +67,8 @@ class AboutMe extends React.Component {
                     </Col>
 
                 </Row>
+                </div>
+                
             </div>
         );
     }
