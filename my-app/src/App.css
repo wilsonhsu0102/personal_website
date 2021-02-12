@@ -71,6 +71,25 @@
   border-bottom: 2px solid lightgray;
 }
 
+.blob-btn, .blob-btn:focus {
+  color: black;
+  padding: 0.5% 3%;
+  margin: 0.5% 0.5%;
+  background-color: rgba(245, 245, 245, 0.6);
+  border-color: black;
+  border-radius: 25px;
+  transition-duration: 0.3s;
+  box-shadow: 0 0 0 #000000 !important;
+}
+
+.blob-btn:hover {
+  background-color: black;
+  border-color: red;
+  border-radius: 25px;
+  transition-duration: 0.5s;
+  box-shadow: 0 0 10px #ff2525 !important;
+}
+
 @media only screen and (min-width: 375px) {
   .page-div {
     padding-top: 15%;

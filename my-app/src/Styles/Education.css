@@ -4,13 +4,17 @@
 
 .education-uoftlogo {
     width: 100%;
-    padding: 1% 4%;
+    padding: 3% 4% 1% 4%;
 }
 
 .education-container {
     color: black;
     font-size: 40px;
     width: 70%;
+}
+
+.education-course {
+    margin-left: 5%;
 }
 
 .education-description {
