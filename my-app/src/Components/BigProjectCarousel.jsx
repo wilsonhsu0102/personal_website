@@ -154,13 +154,16 @@ class BigProjectCarousel extends React.Component {
                     {props => (
                         <animated.div className={"project-item " + d.display} style={props} onClick={i === this.state.main ? () => this.props.showModal(i) : clickFunc}>
                             <Image className="project-item-image" src={d.image} />
-                            <div className="carousel-text" style={i !== this.state.main ? {backgroundColor: 'rgb(169, 169, 169)'} : {}}>
+                            <div className="carousel-text description" style={i !== this.state.main ? { backgroundColor: 'rgb(169, 169, 169)' } : {}}>
                                 {d.name}, {d.display}
                             </div>
                         </animated.div>
                     )}
                 </Spring>)
         })
+        if (this.props.stopSpinning) {
+            clearInterval(this.autoSpin)
+        }
         return (
             <div className="desktop-project-carousel">
                 {carousel}

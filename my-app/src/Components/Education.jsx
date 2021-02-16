@@ -14,13 +14,15 @@ class Education extends React.Component {
                         <Col> <div className="title-horizontal-right"> </div> </Col>
                         <Col xs="0" md="1"></Col>
                     </Row>
-                    <Row className="justify-content-center">
-                        <Image className="education-uoftlogo" src={UofTLogo} />
+                    <Row className="experience-content justify-content-center">
+                        <Col xs="12" lg="6">
+                            <Image className="education-uoftlogo" src={UofTLogo} />
+                        </Col>
+                        <Col xs="12" lg="6" className="education-info sub-title">
+                            H.B.Sc. | Since 2017 - Expected 2022<br/>Specialize in Computer Science<br />Focus Area in Artificial Intelligence<br />Minor in Mathematics<br />cGPA:3.83/4.00
+                        </Col>
                     </Row>
-                    <Row className="justify-content-center education-description">
-                        Specialize in Computer Science<br />Focus Area in Artificial Intelligence<br />Minor in Mathematics<br />cGPA:3.83/4.00
-                    </Row>
-                    <Row className="education-description education-course">Some courses that I took:</Row>
+                    <Row className="sub-title education-course">Some courses that I took:</Row>
                     <Row className="justify-content-center education-description">
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/csc301h1')}>CSC301 Intro. to Software Engineering</Button>
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC309H1')}>CSC309 Programming on the Web</Button>

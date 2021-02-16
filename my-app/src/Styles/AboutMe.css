@@ -5,7 +5,7 @@
 }
 
 .about-title {
-    font-size: 10vw !important;
+    font-size: 25px !important;
 }
 
 .about-title-row {
@@ -48,13 +48,14 @@
 }
 
 .about-resume {
+    width: 100%;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
 .about-resume-btn, .about-resume-btn:focus{
     color: white;
-    padding: 1% 30%;
+    padding: 1% 20%;
     background-color: transparent;
     background-image: linear-gradient(to right,rgba(60, 50, 50, 0.2), rgba(60, 50, 50, 0.7), rgb(60, 50, 50), rgba(60, 50, 50, 0.7), rgba(60, 50, 50, 0.2));
     border-top: 2px solid rgba(0, 0, 0, 0.5);
@@ -79,17 +80,33 @@
     box-shadow: 0 0 10px #ff2525 !important;
     text-decoration: none;
 }
+@media only screen and (min-width: 375px) {
+    .about-title {
+        font-size: 35px !important;
+    }
+
+    .about-resume-btn {
+        padding: 1% 30%;
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .about-title-row {
         padding-bottom: 2%;
     }
 
-    .about-title {
-        font-size: 3.5vw !important;
-    }
-
     .about-resume {
         padding-bottom: 0%;
-    }    
+    }
+
+    .about-icon {
+        padding-top: 15%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .about-title {
+        font-size: 50px !important;
+    }
+    
 }

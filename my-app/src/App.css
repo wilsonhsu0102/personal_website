@@ -10,6 +10,21 @@
   -webkit-background-size: cover !important;
 }
 
+.section-title {
+  font-family: 'Rye', 'Frijole', cursive !important;
+  text-shadow:  0 0 15px rgba(255, 37, 37, 0.4);
+  font-size: 18px;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 15px;
+}
+
+.description {
+  font-size: 10px;
+}
+
 .particle-bg {
   height: 100% !important;
 }
@@ -30,12 +45,6 @@
   height: 100%;
 }
 
-.section-title {
-  font-family: 'Rye', 'Frijole', cursive !important;
-  text-shadow:  0 0 15px rgba(255, 37, 37, 0.4);
-  font-size: 5vw;
-  text-align: center;
-}
 
 .title-horizontal-right {
   height: 0.3vw;
@@ -64,7 +73,7 @@
 }
 
 .end-row {
-  margin-top: 7%;
+  margin-top: 5%;
 }
 
 .border-divider {
@@ -79,21 +88,34 @@
   border-color: black;
   border-radius: 25px;
   transition-duration: 0.3s;
-  box-shadow: 0 0 0 #000000 !important;
+  box-shadow: 0 0 0 rgb(0, 0, 0) !important;
 }
 
 .blob-btn:hover {
-  background-color: black;
-  border-color: red;
+  color: black;
+  background-color: rgba(245, 245, 245, 0.6);
+  border-color: black;
   border-radius: 25px;
   transition-duration: 0.5s;
-  box-shadow: 0 0 10px #ff2525 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) !important;
 }
 
 @media only screen and (min-width: 375px) {
   .page-div {
     padding-top: 15%;
   }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  /* .sub-title {
+    font-size: 18px;
+  }
+  
+  .description {
+    font-size: 13px;
+  } */
 }
 
 @media only screen and (min-width: 768px) {
@@ -102,12 +124,32 @@
   }
 
   .section-title {
-    font-size: 3.5vw;
+    font-size: 35px;
+  }
+
+  .sub-title {
+    font-size: 18px;
+  }
+  
+  .description {
+    font-size: 13px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .page-div {
     padding-top: 5%;
+  }
+
+  .section-title {
+    font-size: 50px;
+  }
+
+  .sub-title {
+    font-size: 25px;
+  }
+  
+  .description {
+    font-size: 16px;
   }
 }

@@ -4,7 +4,11 @@
 
 .education-uoftlogo {
     width: 100%;
-    padding: 3% 4% 1% 4%;
+    padding: 0 10%;
+}
+
+.education-info {
+    text-align: center;
 }
 
 .education-container {
@@ -17,22 +21,20 @@
     margin-left: 5%;
 }
 
-.education-description {
-    font-size: 3vw;
-}
-
-@media only screen and (min-width: 768px) {
-    .education-description {
-        font-size: 1.5vw;
-    }
-
+@media only screen and (min-width: 600px) {
     .education-uoftlogo {
-        width: 70%;
+        padding: 0 20%;
     }
 }
 
 @media only screen and (min-width: 992px) {
+    .education-info {
+        text-align: left;
+    }
+
     .education-uoftlogo {
-        width: 60%;
+        padding: 0 0;
     }
 }
+
+

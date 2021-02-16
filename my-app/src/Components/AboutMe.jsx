@@ -1,9 +1,10 @@
 import React from 'react';
-import '../Styles/AboutMe.css'
+import '../Styles/AboutMe.css';
 import ParticlesConfig from '../Resources/about-particle-config.json';
-import { Button, Image, Row, Col } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { Image, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebookF, faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Particles from 'react-particles-js';
 import profilePic from '../Resources/Profile.png';
 import resume from '../Resources/WilsonHsu_Resume.pdf';
@@ -24,47 +25,52 @@ class AboutMe extends React.Component {
                         <Col xs={{ span: 12 }} md={{ span: 3 }}>
                             <Row><Image className="about-profile-pic" src={profilePic} roundedCircle /></Row>
                             <Row>
-                                <Col className="about-icon about-icon-first-row" xs="3" md="6">
-                                    <a href="https://www.instagram.com/3wheels.on/" target="_blank" className="about-icon-effect">
-                                        <FontAwesomeIcon icon={faInstagram} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="about-icon about-icon-first-row" xs="3" md="6">
-                                    <a href="https://github.com/wilsonhsu0102" target="_blank" className="about-icon-effect">
-                                        <FontAwesomeIcon icon={faGithub} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="about-icon" xs="3" md="6">
-                                    <a href="https://www.facebook.com/ho.ho.hotwheels/" target="_blank" className="about-icon-effect">
-                                        <FontAwesomeIcon icon={faFacebookF} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="about-icon" xs="3" md="6">
+                                <Col className="about-icon" xs="4" md="6">
                                     <a href="https://www.linkedin.com/in/hsu-wilson/" target="_blank" className="about-icon-effect">
                                         <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
                                     </a>
                                 </Col>
-
+                                <Col className="about-icon" xs="4" md="6">
+                                    <a href="https://github.com/wilsonhsu0102" target="_blank" className="about-icon-effect">
+                                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                                    </a>
+                                </Col>
+                                <Col className="about-icon" xs="4" md="6">
+                                    <a href="mailto:wilsonhsu0102@gmail.com" className="about-icon-effect">
+                                        <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                                    </a>
+                                </Col>
+                                <Col className="about-icon" xs="4" md="6">
+                                    <a href="https://www.facebook.com/ho.ho.hotwheels/" target="_blank" className="about-icon-effect">
+                                        <FontAwesomeIcon icon={faFacebookF} size="2x" />
+                                    </a>
+                                </Col>
+                                <Col className="about-icon" xs="4" md="6">
+                                    <a href="https://www.instagram.com/3wheels.on/" target="_blank" className="about-icon-effect">
+                                        <FontAwesomeIcon icon={faInstagram} size="2x" />
+                                    </a>
+                                </Col>
+                                <Col className="about-icon" xs="4" md="6">
+                                    <a href="https://twitter.com/wilsonhsu0102" target="_blank" className="about-icon-effect">
+                                        <FontAwesomeIcon icon={faTwitter} size="2x" />
+                                    </a>
+                                </Col>
                             </Row>
                         </Col>
                         <Col xs={{ span: 12 }} md={{ offset: 1, span: 8 }}>
                             <Row>
-                                <Col className="about-descriptions" xs={{ span: 12, order: 2 }} md={{ span: 12, order: 1 }}>
-                                    Hi! I am Wilson, happy to have you and here is a little background about me.<br/><br/>
-                                    I am a 4<sup>th</sup> year Computer Science student at University of Toronto, currently on my coop term, working for Environment and Climate Change Canada.<br/><br/>
-                                    I been moving around the globe my whole life, making new friends, getting to know different cultures. I grew up as a child in Taiwan,
-                                    I was only grade five when my parents asked me if I would like to study abroad in Vancouver, Canada. Knowing that I would have to start
-                                    speaking a different language and live in a house with no familiar faces did not hesitate me from answering that question. It is not
-                                    that I do not like my parents of course. It is that they taught me to hold on to the opportunities that I get.<br/>
-                                    (and because it is a cool kid thing to study abroad 😎).
+                                <Col className="about-descriptions description" xs={{ span: 12, order: 2 }} md={{ span: 12, order: 1 }}>
+                                    Hi! I am Wilson, happy to have you and here is a little background about me.<br /><br />
+                                    I'm a 4<sup>th</sup> year Computer Science student at University of Toronto, currently on my coop term, working for Environment and Climate Change Canada as a Web Application Developer.<br /><br />
+                                    Computers have always been a thing to me when I was growing up. In the beginning it was simply for games, then it got a whole lot more interesting after I get to see the logic (🧙‍♂️ the magic) behind the views.
+                                    My world has changed since that moment. From replicating the Snake game by watching Youtube tutorials and building simple Email bot to annoy my friend. All the way to winning an award with my team at a hackathon and learning to classify handwritten digits using convolutional neural network.<br /><br />
+                                    It has been a great journey, and I can't wait to see what else is ahead for me. I am open to all opportunities, but Software Engneering or Machine Learning is my particular interest.
                                 </Col>
                                 <Col xs={{ span: 12, order: 1 }} md={{ span: 12, order: 2 }} className="about-resume justify-content-center">
-                                    <a className="about-resume-btn" href={resume} download> Download Resume </a>
+                                    <a className="about-resume-btn description" href={resume} download> Download Resume </a>
                                 </Col>
                             </Row>
-
                         </Col>
-
                     </Row>
                 </div>
 

@@ -7,7 +7,19 @@
 }
 
 .experience-content {
-    padding-top: 5%;
+    padding-top: 3%;
 }
 
+.experience-loc-time {
+    margin: 1% 0 2% 0;
+}
 
+.experience-description {
+    text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+    .experience-title {
+        font-size: 1.5vw;
+    }
+}

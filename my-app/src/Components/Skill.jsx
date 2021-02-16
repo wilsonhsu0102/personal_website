@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Skill.css';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Tabs, Tab, Container, Row, Col } from 'react-bootstrap'
 
 class Skill extends React.Component {
     render() {
@@ -13,14 +13,52 @@ class Skill extends React.Component {
                         <Col> <div className="title-horizontal-right"> </div> </Col>
                         <Col xs="0" md="1"></Col>
                     </Row>
-                    <Row className="experience-content justify-content-center">
-                        <Col xs="12" md="9">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit.
-                            Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio.
-                            Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend
-                            feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec
-                            sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra
-                            ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida.
+                    <Row className="experience-content">
+                        <Col xs={{offset: 0, span: 12}} md={{offset: 1, span: 5}}>
+                            <Row className="sub-title justify-content-center">Artificial Intelligence</Row>
+                            <Row className="justify-content-center description">
+                                <div className="pl-blob">PyTorch</div>
+                                <div className="pl-blob">Scilit-learn</div>
+                                <div className="pl-blob">Keras</div>
+                                <div className="pl-blob">NumPy</div>
+                            </Row>
+                        </Col>
+                        <Col xs="12" md="5">
+                            <Row className="sub-title justify-content-center">Programming Language</Row>
+                            <Row className="justify-content-center description">
+                                <div className="pl-blob">Python</div>
+                                <div className="pl-blob">C</div>
+                                <div className="pl-blob">C#</div>
+                                <div className="pl-blob">SQL</div>
+                                <div className="pl-blob">Javascript</div>
+                                <div className="pl-blob">HTML</div>
+                                <div className="pl-blob">CSS</div>
+                                <div className="pl-blob">Java</div>
+                                <div className="pl-blob">Dr.Racket</div>
+                                <div className="pl-blob">Haskell</div>
+                            </Row>
+                        </Col>
+                        <Col xs={{offset: 0, span: 12}} md={{offset: 1, span: 5}}>
+                            <Row className="sub-title justify-content-center">Web Development</Row>
+                            <Row className="justify-content-center description">
+                                <div className="pl-blob">ASP.NET</div>
+                                <div className="pl-blob">Entity.js</div>
+                                <div className="pl-blob">React</div>
+                                <div className="pl-blob">Angular.js</div>
+                                <div className="pl-blob">Express.js</div>
+                                <div className="pl-blob">Node.js</div>
+                                <div className="pl-blob">Postman</div>
+                                <div className="pl-blob">Flask</div>
+                                <div className="pl-blob">Bootstrap</div>
+                            </Row>
+                        </Col>
+                        <Col xs="12" md="5">
+                            <Row className="sub-title justify-content-center">Database</Row>
+                            <Row className="justify-content-center description">
+                                <div className="pl-blob">SSMS</div>
+                                <div className="pl-blob">MongoDB</div>
+                                <div className="pl-blob">PostgreSQL</div>
+                            </Row>
                         </Col>
                     </Row>
                     <Row className="experience-content">

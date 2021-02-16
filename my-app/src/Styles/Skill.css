@@ -2,3 +2,13 @@
     background-color: whitesmoke;
 }
 
+.pl-blob {
+    width: fit-content;
+    color: black;
+    padding: 3px 20px;
+    margin: 4px 5px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+    box-shadow: 0 0 3px #ff2525 !important;
+}
