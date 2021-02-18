@@ -14,6 +14,7 @@ const data = [
         image: screenShot,
         modal: {
             images: [screenShot2, screenShot2],
+            date: "Sep. 2020",
             description: ["Parsed sentences into their corresponding projective dependency tree to find the grammatical relationships between the words."
                 , "Implemented a feedforward-NN using PyTorch library to predict the next relation to draw."
                 , "Achieved 89% accuracy on test data."]
@@ -26,6 +27,7 @@ const data = [
         image: screenShot2,
         modal: {
             images: [screenShot2, screenShot2],
+            date: "Sep. 2020",
             description: ["Car rental app that won the Best Aragon App award at UofTHacksVI out of 100+ participating teams."
                 , "Smart contract created/stored on the Ethereum Blockchain and managed using Aragon platform."
                 , "Integrated SmartCar API to remotely lock/unlock smart vehicles once transactions are verified."]
@@ -38,6 +40,7 @@ const data = [
         image: screenShot2,
         modal: {
             images: [screenShot, screenShot],
+            date: "Sep. 2020",
             description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."]
         }
     },
@@ -48,6 +51,7 @@ const data = [
         image: screenShot,
         modal: {
             images: [screenShot2, screenShot],
+            date: "Sep. 2020",
             description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."]
         }
     },
@@ -58,6 +62,7 @@ const data = [
         image: screenShot2,
         modal: {
             images: [screenShot, screenShot2],
+            date: "Sep. 2020",
             description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."]
         }
     }
@@ -110,6 +115,9 @@ class Project extends React.Component {
                 </Modal.Header>
                 <Modal.Body>
                     <CarouselGallery images={displayElement.modal.images} />
+                    <Row className="description modal-date-link justify-content-center">
+                        {displayElement.modal.date} | <a className="modal-link" href="#" target="_blank">Project Link</a>
+                    </Row>
                     <ul>
                         {displayElement.modal.description.map((item) => {
                             return <li className="description">{item}</li>

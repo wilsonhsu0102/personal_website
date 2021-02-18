@@ -22,7 +22,7 @@ class Education extends React.Component {
                             H.B.Sc. | Since 2017 - Expected 2022<br/>Specialize in Computer Science<br />Focus Area in Artificial Intelligence<br />Minor in Mathematics<br />cGPA:3.83/4.00
                         </Col>
                     </Row>
-                    <Row className="sub-title education-course">Some courses that I took:</Row>
+                    <Row className="sub-title education-course">Courses that interested me</Row>
                     <Row className="justify-content-center education-description">
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/csc301h1')}>CSC301 Intro. to Software Engineering</Button>
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC309H1')}>CSC309 Programming on the Web</Button>
@@ -31,7 +31,7 @@ class Education extends React.Component {
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC343H1')}>CSC343 Intro. to Databases</Button>
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC369H1')}>CSC369 Operating Systems</Button>
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC373H1')}>CSC373 Algorithm Design and Analysis</Button>
-                        <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC384H1')}>CSC384 Intro. to Artifical Intelligence</Button>
+                        <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC384H1')}>CSC384 Intro. to AI</Button>
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC485H1')}>CSC485 Computational Linguistics</Button>
                     </Row>
                     <Row className="justify-content-center end-row">

@@ -49,13 +49,14 @@
 
 .about-resume {
     width: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .about-resume-btn, .about-resume-btn:focus{
     color: white;
-    padding: 1% 20%;
+    box-sizing: border-box;
+    width: 100%;
     background-color: transparent;
     background-image: linear-gradient(to right,rgba(60, 50, 50, 0.2), rgba(60, 50, 50, 0.7), rgb(60, 50, 50), rgba(60, 50, 50, 0.7), rgba(60, 50, 50, 0.2));
     border-top: 2px solid rgba(0, 0, 0, 0.5);
@@ -63,23 +64,39 @@
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 0%;
-    transition-duration: 0.6s;
+    transition-duration: 0.3s;
     box-shadow: 0 0 0 #000000 !important;
-    text-decoration: none;
 }
 
 .about-resume-btn:hover {
     color: white;
-    background-color: rgb(60, 50, 50);
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    transition-duration: 0.3s;
+    background-color: rgb(60, 50, 50) !important;
+    border-top: 2px solid transparent !important;
+    border-bottom: 2px solid transparent !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
     outline: none !important;
+    transition-duration: 0.3s;
     box-shadow: 0 0 10px #ff2525 !important;
-    text-decoration: none;
 }
+
+.about-resume-svg {
+    display: none;
+}
+
+.about-resume-btn:hover > .about-resume-text {
+    color: transparent;
+}
+
+.about-resume-btn:hover > .about-resume-svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
 @media only screen and (min-width: 375px) {
     .about-title {
         font-size: 35px !important;
@@ -96,11 +113,11 @@
     }
 
     .about-resume {
-        padding-bottom: 0%;
+        margin-bottom: 0%;
     }
 
     .about-icon {
-        padding-top: 15%;
+        padding-top: 20%;
     }
 }
 

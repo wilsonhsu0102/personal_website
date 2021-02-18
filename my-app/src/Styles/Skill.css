@@ -2,13 +2,52 @@
     background-color: whitesmoke;
 }
 
-.pl-blob {
+.skill-blob {
     width: fit-content;
     color: black;
     padding: 3px 20px;
-    margin: 4px 5px;
-    border: 1px solid transparent;
+    margin: 5px 5px;
+    border: 1px solid rgb(255, 37, 37);
     border-radius: 25px;
     transition-duration: 0.3s;
-    box-shadow: 0 0 3px #ff2525 !important;
+    box-shadow: 0 5px 5px rgb(255, 37, 37) !important;
+    transition-duration: 0.5s;
+}
+
+.skill-svg {
+    display: none;
+}
+
+.skill-blob:hover {
+    transition-duration: 0.5s;
+    transform: translateY(5px);
+    box-shadow: 0 0 3px rgb(255, 37, 37) !important;
+}
+
+.skill-blob-row {
+    margin-top: 3%;
+}
+
+.skill-title-bar {
+    background-color: rgb(255, 37, 37);
+    height: 1px;
+    margin: 5px auto;
+    width: 20%;
+}
+
+.skill-first-row-2 {
+    margin-top: 5%;
+}
+.skill-second-row {
+    margin-top: 5%;
+}
+
+@media only screen and (min-width: 768px) {
+    .skill-first-row-2 {
+        margin-top: 0;
+    }
+
+    .skill-title-bar {
+        height: 1.75px;
+    }
 }

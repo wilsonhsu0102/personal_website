@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,500&display=swap');
+
 .App {
   text-align: center;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),url('./Resources/welcome_page.jpg');
@@ -10,19 +13,24 @@
   -webkit-background-size: cover !important;
 }
 
+.svg-link {
+  font-size: 1.5em !important;
+}
+
 .section-title {
-  font-family: 'Rye', 'Frijole', cursive !important;
+  font-family: 'Rye', cursive !important;
   text-shadow:  0 0 15px rgba(255, 37, 37, 0.4);
-  font-size: 18px;
+  font-size: 1em;
   text-align: center;
 }
 
 .sub-title {
-  font-size: 15px;
+  font-size: 1.5em;
 }
 
 .description {
-  font-size: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1em;
 }
 
 .particle-bg {
@@ -80,26 +88,6 @@
   border-bottom: 2px solid lightgray;
 }
 
-.blob-btn, .blob-btn:focus {
-  color: black;
-  padding: 0.5% 3%;
-  margin: 0.5% 0.5%;
-  background-color: rgba(245, 245, 245, 0.6);
-  border-color: black;
-  border-radius: 25px;
-  transition-duration: 0.3s;
-  box-shadow: 0 0 0 rgb(0, 0, 0) !important;
-}
-
-.blob-btn:hover {
-  color: black;
-  background-color: rgba(245, 245, 245, 0.6);
-  border-color: black;
-  border-radius: 25px;
-  transition-duration: 0.5s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) !important;
-}
-
 @media only screen and (min-width: 375px) {
   .page-div {
     padding-top: 15%;
@@ -109,13 +97,9 @@
     font-size: 28px;
   }
 
-  /* .sub-title {
-    font-size: 18px;
+  .svg-link {
+    font-size: 2em !important;
   }
-  
-  .description {
-    font-size: 13px;
-  } */
 }
 
 @media only screen and (min-width: 768px) {
@@ -126,14 +110,14 @@
   .section-title {
     font-size: 35px;
   }
-
+/* 
   .sub-title {
     font-size: 18px;
-  }
+  } */
   
-  .description {
+  /* .description {
     font-size: 13px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 992px) {
@@ -145,11 +129,11 @@
     font-size: 50px;
   }
 
-  .sub-title {
+  /* .sub-title {
     font-size: 25px;
-  }
+  } */
   
-  .description {
-    font-size: 16px;
-  }
+  /* .description {
+    font-size: 1em;
+  } */
 }

@@ -17,10 +17,15 @@ class Experience extends React.Component {
                         <Col xs="0" md="1"></Col>
                     </Row>
                     <Row className="experience-content justify-content-center">
-                        <Col xs="8" lg="3"><Image className="about-profile-pic" src={ECCCLogo} /></Col>
+                        <Col xs="12" lg="3"><Image className="about-profile-pic" src={ECCCLogo} /></Col>
                         <Col xs="12" lg="9">
                             <Row className="justify-content-center sub-title">
-                                Web Application Developer
+                                <Col xs="12">
+                                    Web Application Developer
+                                </Col>
+                                <Col xs="12">
+                                    <div className="skill-title-bar"></div>
+                                </Col>
                             </Row>
                             <Row className="justify-content-center experience-loc-time description">
                                 Environment and Climate Change Canada | North York, ON | Aug. 2020 - Aug. 2021
@@ -47,10 +52,15 @@ class Experience extends React.Component {
                         <Col xs={{ offset: 3, span: 6 }} className="border-divider"></Col>
                     </Row>
                     <Row className="experience-content justify-content-center">
-                        <Col xs="8" lg="3"><Image className="about-profile-pic" src={rocsautLogo} /></Col>
+                        <Col xs="12" lg="3"><Image className="about-profile-pic" src={rocsautLogo} /></Col>
                         <Col xs="12" lg="9">
                             <Row className="justify-content-center sub-title">
-                                Vice-president of Operation
+                                <Col xs="12">
+                                    Vice-president of Operation
+                                </Col>
+                                <Col xs="12">
+                                    <div className="skill-title-bar"></div>
+                                </Col>
                             </Row>
                             <Row className="justify-content-center experience-loc-time description">
                                 Taiwan (ROC) Student Association at UofT | Toronto, ON | Mar 2019 - Apr. 2020
@@ -65,7 +75,7 @@ class Experience extends React.Component {
                                         numerous potential sponsors.
                                     </li>
                                     <li>
-                                        In charge of purchasing require items, booking locations for events and tracking inventories. 
+                                        In charge of purchasing require items, booking locations for events and tracking inventories.
                                     </li>
                                 </ul>
                             </Row>

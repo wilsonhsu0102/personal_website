@@ -78,6 +78,14 @@
     overflow-y: inherit !important;
 }
 
+.modal-date-link {
+    margin: 1% 0 3% 0;
+}
+
+.modal-link {
+    margin-left: 0.5em;
+}
+
 .sm-carousel-image {
     opacity: 0.8;
     cursor: pointer;
