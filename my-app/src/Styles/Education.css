@@ -13,22 +13,27 @@
 
 .education-info {
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em; 
+}
+
+.education-svg {
+    margin: 0 auto;
 }
 
 .education-container {
     color: black;
-    /* font-size: 40px; */
     width: 70%;
 }
 
 .education-course {
-    margin-left: 5%;
+    margin: 5% 0 1% 0;
 }
 
 .blob-btn, .blob-btn:focus {
     color: rgb(0, 45, 109);
     padding: 0.5% 3%;
-    margin: 0.7% 0.7%;
+    margin: 0.5% 0.7%;
     background-color: rgba(245, 245, 245, 0.6);
     border-color: rgb(0, 45, 109);
     border-radius: 25px;
@@ -53,13 +58,24 @@
 }
 
 @media only screen and (min-width: 992px) {
-    .education-info {
-        text-align: left;
-    }
 
     .education-uoftlogo {
-        padding: 0 0;
+        padding: 0 0 0 17%;
+    }
+
+    .education-svg {
+        text-align: right;
+        margin: 0 0 0 0;
     }
 }
 
+@media only screen and (min-width: 1200px) {
+    .education-uoftlogo {
+        padding: 0 0 0 17%;
+    }
 
+    .education-svg {
+        text-align: right;
+        margin: 0 0 0 10%;
+    }
+}

@@ -23,7 +23,7 @@ class ContactMe extends React.Component {
                     <Row className="contact-row">
                         <Col xs="12" md="5">
                             <Row>
-                                <Col>
+                                <Col className="contact-method">
                                     Get in touch with me at
                                 </Col>
                             </Row>
@@ -63,19 +63,19 @@ class ContactMe extends React.Component {
                         <Col className="contact-or-col" xs="12" md="1">
                             <Row noGutters>
                                 <Col xs={{ span: 3, offset: 2 }} md={{ span: 3, offset: 0 }} className="contact-horizontal-line"></Col>
-                                <Col xs="2" md="6">or</Col>
+                                <Col className="contact-method" xs="2" md="6">or</Col>
                                 <Col xs="3" md="3" className="contact-horizontal-line"></Col>
                             </Row>
                         </Col>
                         <Col xs="12" md="6">
                             <Row>
-                                <Col xs={{offset: 0, span: 12}} md={{offset: 3, span: 9}}>
+                                <Col className="contact-method" xs={{offset: 0, span: 12}} md={{offset: 3, span: 9}}>
                                     Leave me a message
                                 </Col>
                             </Row>
                             <Form.Row className="contact-form-row" controlId="formSenderName">
                                 <Col xs="12" md="3">
-                                    <Form.Label className="contact-msg-category">Your name</Form.Label>
+                                    <Form.Label className="contact-msg-category">Your  name</Form.Label>
                                 </Col>
                                 <Col xs="12" md="9">
                                     <Form.Control type="name" />

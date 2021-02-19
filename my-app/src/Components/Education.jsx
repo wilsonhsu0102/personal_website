@@ -1,6 +1,8 @@
 import React from 'react';
 import '../Styles/Education.css';
 import { Image, Button, Container, Row, Col } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareRootAlt, faCertificate, faBrain, faGraduationCap, faCode } from '@fortawesome/free-solid-svg-icons';
 import UofTLogo from '../Resources/UofTLogo.png';
 
 class Education extends React.Component {
@@ -18,11 +20,58 @@ class Education extends React.Component {
                         <Col xs="12" lg="6">
                             <Image className="education-uoftlogo" src={UofTLogo} />
                         </Col>
-                        <Col xs="12" lg="6" className="education-info sub-title">
-                            H.B.Sc. | Since 2017 - Expected 2022<br/>Specialize in Computer Science<br />Focus Area in Artificial Intelligence<br />Minor in Mathematics<br />cGPA:3.83/4.00
+                        <Col xs="12" lg="6">
+                            <Row className="education-info">
+                                <Col xs="12" lg="1" className="education-svg">
+                                    <FontAwesomeIcon icon={faGraduationCap} />
+                                </Col>
+                                <Col xs="12" lg="auto">
+                                    H.B.Sc. | 2017 - 2022 (Expected)
+                                </Col>
+                            </Row>
+                            <Row className="education-info">
+                                <Col xs="12" lg="1" className="education-svg">
+                                    <FontAwesomeIcon icon={faCode} />
+                                </Col>
+                                <Col xs="12" lg="auto">
+                                    Specialize in Computer Science
+                                </Col>
+                            </Row>
+                            <Row className="education-info">
+                                <Col xs="12" lg="1" className="education-svg">
+                                    <FontAwesomeIcon icon={faBrain} />
+                                </Col>
+                                <Col xs="12" lg="auto">
+                                    Focus Area in Artificial Intelligence
+                                </Col>
+                            </Row>
+                            <Row className="education-info">
+                                <Col xs="12" lg="1" className="education-svg">
+                                    <FontAwesomeIcon icon={faSquareRootAlt} />
+                                </Col>
+                                <Col xs="12" lg="auto">
+                                    Minor in Mathematics
+                                </Col>
+                            </Row>
+                            <Row className="education-info">
+                                <Col xs="12" lg="1" className="education-svg">
+                                    <FontAwesomeIcon icon={faCertificate} />
+                                </Col>
+                                <Col xs="12" lg="auto">
+                                    cGPA:3.83/4.00
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
-                    <Row className="sub-title education-course">Courses that interested me</Row>
+                    <Row className="sub-title education-course justify-content-center">
+                        <Col xs="12">
+                            Courses that interested me
+
+                        </Col>
+                        <Col xs="12">
+                            <div className="skill-title-bar"></div>
+                        </Col>
+                    </Row>
                     <Row className="justify-content-center education-description">
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/csc301h1')}>CSC301 Intro. to Software Engineering</Button>
                         <Button className="blob-btn" onClick={() => window.open('https://fas.calendar.utoronto.ca/course/CSC309H1')}>CSC309 Programming on the Web</Button>

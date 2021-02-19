@@ -31,7 +31,7 @@
 .skill-title-bar {
     background-color: rgb(255, 37, 37);
     height: 1px;
-    margin: 5px auto;
+    margin: 1px auto 3px auto;
     width: 20%;
 }
 
@@ -48,6 +48,6 @@
     }
 
     .skill-title-bar {
-        height: 1.75px;
+        height: 0.07em;
     }
 }
