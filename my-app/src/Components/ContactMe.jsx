@@ -7,8 +7,51 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
+import emailjs from 'emailjs-com';
 
 class ContactMe extends React.Component {
+    constructor(props) {
+        super(props)
+        this.emailSender = React.createRef();
+        this.emailContent = React.createRef();
+        this.state = {
+            emailSuccess: {
+                display: 'none'
+            },
+            emailError: {
+                display: 'none'
+            }
+        }
+    }
+    sendEmail = (e) => {
+        e.preventDefault();
+        const variables = { from_name: this.emailSender.current.value, message: this.emailContent.current.value };
+        emailjs.send('service_w4a75zg', 'template_pd4mq6p', variables, 'user_p4TidKTSLLuOWcfALVvLN')
+            .then(res => {
+                this.setState({
+                    emailSuccess: {
+                        display: 'block'
+                    },
+                    emailError: {
+                        display: 'none'
+                    }
+                })
+                this.emailContent.current.value = "";
+                this.emailSender.current.value = "";
+            })
+            .catch(err => {
+                this.setState({
+                    emailSuccess: {
+                        display: 'none'
+                    },
+                    emailError: {
+                        display: 'block'
+                    }
+                })
+                console.log(err)
+            })
+    }
+
     render() {
         let currentYear = new Date().getFullYear();
         return (
@@ -29,12 +72,12 @@ class ContactMe extends React.Component {
                             </Row>
                             <Row className="contact-form-row justify-content-center">
                                 <Col className="contact-icon" xs="4">
-                                    <a href="https://www.linkedin.com/in/hsu-wilson/" target="_blank" className="about-icon-effect">
+                                    <a href="https://www.linkedin.com/in/hsu-wilson/" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faLinkedinIn} size="2x" />
                                     </a>
                                 </Col>
                                 <Col className="contact-icon" xs="4">
-                                    <a href="https://github.com/wilsonhsu0102" target="_blank" className="about-icon-effect">
+                                    <a href="https://github.com/wilsonhsu0102" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faGithub} size="2x" />
                                     </a>
                                 </Col>
@@ -44,17 +87,17 @@ class ContactMe extends React.Component {
                                     </a>
                                 </Col>
                                 <Col className="contact-icon" xs="4">
-                                    <a href="https://www.facebook.com/ho.ho.hotwheels/" target="_blank" className="about-icon-effect">
+                                    <a href="https://www.facebook.com/ho.ho.hotwheels/" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faFacebookF} size="2x" />
                                     </a>
                                 </Col>
                                 <Col className="contact-icon" xs="4">
-                                    <a href="https://www.instagram.com/3wheels.on/" target="_blank" className="about-icon-effect">
+                                    <a href="https://www.instagram.com/3wheels.on/" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faInstagram} size="2x" />
                                     </a>
                                 </Col>
                                 <Col className="contact-icon" xs="4">
-                                    <a href="https://twitter.com/wilsonhsu0102" target="_blank" className="about-icon-effect">
+                                    <a href="https://twitter.com/wilsonhsu0102" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faTwitter} size="2x" />
                                     </a>
                                 </Col>
@@ -69,7 +112,7 @@ class ContactMe extends React.Component {
                         </Col>
                         <Col xs="12" md="6">
                             <Row>
-                                <Col className="contact-method" xs={{offset: 0, span: 12}} md={{offset: 3, span: 9}}>
+                                <Col className="contact-method" xs={{ offset: 0, span: 12 }} md={{ offset: 3, span: 9 }}>
                                     Leave me a message
                                 </Col>
                             </Row>
@@ -78,7 +121,7 @@ class ContactMe extends React.Component {
                                     <Form.Label className="contact-msg-category">Your  name</Form.Label>
                                 </Col>
                                 <Col xs="12" md="9">
-                                    <Form.Control type="name" />
+                                    <Form.Control type="name" ref={this.emailSender} />
                                 </Col>
                             </Form.Row>
                             <Form.Row className="contact-form-row" controlId="formInfo">
@@ -86,24 +129,28 @@ class ContactMe extends React.Component {
                                     <Form.Label className="contact-msg-category">Let me know</Form.Label>
                                 </Col>
                                 <Col xs="12" md="9">
-                                    <Form.Control className="contact-msg-textArea" as="textarea" rows={3} type="info" />
+                                    <Form.Control className="contact-msg-textArea" as="textarea" rows={3} type="info" ref={this.emailContent} />
                                 </Col>
                             </Form.Row>
                             <Row className="contact-form-row">
-                                <Col xs={{offset: 0, span: 12}} md={{offset: 9, span: 3}}>
-                                    <Button className="contact-send-btn" variant="primary" type="submit">
+                                <Col xs={{offset: 0, span: 12}} md={{offset: 3, span: 6}}>
+                                    <div className="email-success email-sent-status" style={this.state.emailSuccess}> Email sent successfully </div>
+                                    <div className="email-error email-sent-status" style={this.state.emailError}> There was an error </div>
+                                </Col>
+                                <Col xs="12" md="3">
+                                    <Button className="contact-send-btn" variant="primary" type="submit" onClick={this.sendEmail}>
                                         <div className="contact-send-text">Send</div>
-                                        <FontAwesomeIcon className="contact-send-svg" icon={faPaperPlane}/>
+                                        <FontAwesomeIcon className="contact-send-svg" icon={faPaperPlane} />
                                     </Button>
                                 </Col>
                             </Row>
                         </Col>
                     </Row>
                     <Row className="justify-content-center copy-right-row1">
-                        <small> &copy; Copyright 2020 - {currentYear} </small>
+                        <small> Designed by Wilson Hsu 😎</small>
                     </Row>
                     <Row className="justify-content-center copy-right-row2">
-                        <small> All Rights Reserved. </small>
+                        <small>  &copy; Copyright 2020 - {currentYear} | All Rights Reserved. </small>
                     </Row>
                 </Container>
             </div >

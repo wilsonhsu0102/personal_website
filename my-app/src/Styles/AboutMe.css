@@ -23,7 +23,7 @@
 }
 
 .about-icon-effect:hover {
-    color: red;
+    color: rgb(255, 37, 37);
     transition-duration: 0.3s;
 }
 
@@ -77,7 +77,7 @@
     border-right-color: transparent !important;
     outline: none !important;
     transition-duration: 0.3s;
-    box-shadow: 0 0 10px #ff2525 !important;
+    box-shadow: 0 0 10px rgb(255, 37, 37) !important;
 }
 
 .about-resume-svg {

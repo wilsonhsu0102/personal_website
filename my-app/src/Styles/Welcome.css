@@ -3,15 +3,28 @@
 }
 
 .welcome-text {
+    font-family: 'Exo', sans-serif;
     color: white;
     font-size: 5vw;
     font-weight:bold;
-    border-bottom: 0.3vw solid white;
+}
+
+.welcome-line {
+    position: relative;
+    top: 0;
+    height: 3px; 
+    background-color: white;
 }
 
 .welcome-looped-text {
     font-size: 3vw;
     font-family: 'Inconsolata', monospace;
+}
+
+.welcome-start {
+    padding-top: 12%;
+    color: black;
+    font-weight: bold;
 }
 
 .welcome-center {
@@ -22,4 +35,41 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.welcome-btn, .welcome-btn:focus {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../Resources/yoshiEggGray.png') no-repeat;
+    background-size: contain;
+    background-color: transparent !important;
+    transition-duration: 0.3s;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.welcome-btn:hover, .welcome-btn:active {
+    transition-duration: 0.3s;
+    background: url('../Resources/yoshiEggRed.png') no-repeat;
+    background-size: contain;
+    background-color: transparent !important;
+    outline: none;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.welcome-svg {
+    display: block;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 375px) {
+    .welcome-line {
+        top: -5px;
+        height: 5px;
+    }
 }

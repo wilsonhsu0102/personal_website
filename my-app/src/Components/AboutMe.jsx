@@ -26,12 +26,12 @@ class AboutMe extends React.Component {
                             <Row><Image className="about-profile-pic" src={profilePic} roundedCircle /></Row>
                             <Row>
                                 <Col className="about-icon" xs="4">
-                                    <a href="https://www.linkedin.com/in/hsu-wilson/" target="_blank" className="about-icon-effect">
+                                    <a href="https://www.linkedin.com/in/hsu-wilson/" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faLinkedinIn} size="2x" />
                                     </a>
                                 </Col>
                                 <Col className="about-icon" xs="4">
-                                    <a href="https://github.com/wilsonhsu0102" target="_blank" className="about-icon-effect">
+                                    <a href="https://github.com/wilsonhsu0102" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faGithub} size="2x" />
                                     </a>
                                 </Col>
@@ -41,17 +41,17 @@ class AboutMe extends React.Component {
                                     </a>
                                 </Col>
                                 <Col className="about-icon" xs="4">
-                                    <a href="https://www.facebook.com/ho.ho.hotwheels/" target="_blank" className="about-icon-effect">
+                                    <a href="https://www.facebook.com/ho.ho.hotwheels/" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faFacebookF} size="2x" />
                                     </a>
                                 </Col>
                                 <Col className="about-icon" xs="4">
-                                    <a href="https://www.instagram.com/3wheels.on/" target="_blank" className="about-icon-effect">
+                                    <a href="https://www.instagram.com/3wheels.on/" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faInstagram} size="2x" />
                                     </a>
                                 </Col>
                                 <Col className="about-icon" xs="4">
-                                    <a href="https://twitter.com/wilsonhsu0102" target="_blank" className="about-icon-effect">
+                                    <a href="https://twitter.com/wilsonhsu0102" target="_blank" rel="noreferrer" className="about-icon-effect">
                                         <FontAwesomeIcon className="svg-link" icon={faTwitter} size="2x" />
                                     </a>
                                 </Col>
