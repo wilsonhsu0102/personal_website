@@ -12,8 +12,8 @@ class Welcome extends React.Component {
         super(props)
         this.state = {
             flash: 1,
-            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(0, 0, 0, 0.7)'},
-            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.7)'}
+            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(0, 0, 0, 0.7)' },
+            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.7)' }
         }
     }
 
@@ -31,15 +31,15 @@ class Welcome extends React.Component {
 
     changeOriginal = () => {
         this.setState({
-            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(0, 0, 0, 0.7)'},
-            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.7)'}
+            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(0, 0, 0, 0.7)' },
+            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.7)' }
         })
     }
 
     changeRed = () => {
         this.setState({
-            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(255, 37, 37, 1)'},
-            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(255, 37, 37, 1)'}
+            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(255, 37, 37, 1)' },
+            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(255, 37, 37, 1)' }
         })
     }
 
@@ -59,18 +59,25 @@ class Welcome extends React.Component {
                     <div className="welcome-line" style={this.state.welcomeBoxStyle}></div>
                     <Typed
                         className="welcome-looped-text"
+                        style={this.state.welcomeTextStyle}
                         strings={["I'm a software developer.", "I'm based in Toronto."]}
-                        typeSpeed={60}
+                        typeSpeed={80}
                         backSpeed={30}
                         backDelay={500}
                         loop
                     />
-
+                    <div class="dec_1 text-dec"></div>
+                    <div class="dec_2 text-dec"></div>
+                    <div class="dec_3 text-dec"></div>
+                    <div class="dec_4 text-dec"></div>
+                    <div class="dec_5 text-dec"></div>
+                    <div class="dec_6 text-dec"></div>
+                    <div class="dec_7 text-dec"></div>
                 </div>
                 <Button className="welcome-btn" onMouseEnter={this.changeRed} onMouseLeave={this.changeOriginal} onClick={() => scroller.scrollTo('about', {
-                            smooth: true,
-                            duration: 700,
-                        })}>
+                    smooth: true,
+                    duration: 700,
+                })}>
                     <div className="welcome-start">Start</div>
                     <FontAwesomeIcon className="welcome-svg" style={styleList[0]} icon={faChevronDown} size="1x" />
                     <FontAwesomeIcon className="welcome-svg" style={styleList[1]} icon={faChevronDown} size="1x" />

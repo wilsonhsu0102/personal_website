@@ -5,6 +5,8 @@
 .navbar-block {
     width: fit-content;
     margin: 0 auto;
+    font-family: 'Inconsolata', monospace;
+
 }
 
 .nav-link {

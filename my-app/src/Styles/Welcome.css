@@ -19,6 +19,10 @@
 .welcome-looped-text {
     font-size: 3vw;
     font-family: 'Inconsolata', monospace;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 
 .welcome-start {
