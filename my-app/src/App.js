@@ -10,7 +10,7 @@ import ContactMe from './Components/ContactMe.jsx';
 import useScrollPosition from './Components/ScrollHelper';
 
 function App() {
-  let scrollPos = useScrollPosition();
+  // let scrollPos = useScrollPosition();
   return (
     <div className="App">
       <Navigator />

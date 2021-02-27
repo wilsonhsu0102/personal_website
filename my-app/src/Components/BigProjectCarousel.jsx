@@ -69,27 +69,10 @@ class BigProjectCarousel extends React.Component {
     spinLeft = () => {
         let lastRight = this.state.right
         let lastMain = this.state.main
-        let nextRight
-        let tmp = this.state.data.map((d, i) => {
-            if (i === this.state.main) {
-                d.display = "project-left"
-            } else if (i === this.state.left) {
-                d.display = "project-none"
-            } else if (i === this.state.right) {
-                d.display = "project-main"
-            }
-
-            if (i - 1 === this.state.right || (i === 0 && this.dataSize - 1 === this.state.right)) {
-                d.display = "project-right"
-                nextRight = i
-            }
-            return d
-        });
         this.setState({
-            data: tmp,
             main: lastRight,
             left: lastMain,
-            right: nextRight
+            right: this.dataSize - 1 === lastRight ? 0 : lastRight + 1
         })
         this.props.slideChange(lastRight)
         clearInterval(this.autoSpin)
@@ -101,26 +84,9 @@ class BigProjectCarousel extends React.Component {
     spinRight = () => {
         let lastLeft = this.state.left
         let lastMain = this.state.main
-        let nextLeft
-        let tmp = this.state.data.map((d, i) => {
-            if (i === this.state.main) {
-                d.display = "project-right"
-            } else if (i === this.state.left) {
-                d.display = "project-main"
-            } else if (i === this.state.right) {
-                d.display = "project-none"
-            }
-
-            if (i + 1 === this.state.left || (i === this.dataSize - 1 && 0 === this.state.left)) {
-                d.display = "project-left"
-                nextLeft = i
-            }
-            return d
-        });
         this.setState({
-            data: tmp,
             main: lastLeft,
-            left: nextLeft,
+            left: 0 === lastLeft ? this.dataSize - 1 : lastLeft - 1,
             right: lastMain
         })
         this.props.slideChange(lastLeft)
@@ -138,24 +104,29 @@ class BigProjectCarousel extends React.Component {
         let carousel = this.state.data.map((d, i) => {
             let nextPos;
             let clickFunc;
+            let hoverEffect;
             if (i === this.state.main) {
                 nextPos = position["project-main"];
+                hoverEffect = "project-main"
             } else if (i === this.state.left) {
                 nextPos = position["project-left"];
                 clickFunc = this.spinRight
+                hoverEffect = "project-left"
             } else if (i === this.state.right) {
                 nextPos = position["project-right"];
                 clickFunc = this.spinLeft
+                hoverEffect = "project-right"
             } else {
                 nextPos = position["project-none"];
+                hoverEffect = "project-none"
             }
             return (
                 <Spring key={i} config={customConfig} to={nextPos}>
                     {props => (
-                        <animated.div className={"project-item " + d.display} style={props} onClick={i === this.state.main ? () => this.props.showModal(i) : clickFunc}>
+                        <animated.div className={"project-item " + hoverEffect} style={props} onClick={i === this.state.main ? () => this.props.showModal(i) : clickFunc}>
                             <Image className="project-item-image" src={d.image} />
                             <div className="carousel-text description" style={i !== this.state.main ? { backgroundColor: 'rgb(169, 169, 169)' } : {}}>
-                                {d.name}, {d.display}
+                                {d.name}
                             </div>
                         </animated.div>
                     )}
