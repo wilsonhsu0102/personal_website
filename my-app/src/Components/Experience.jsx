@@ -34,7 +34,7 @@ class Experience extends React.Component {
                                 <ul>
                                     <li>
                                         Worked in an Agile team which is responsible for upgrading and maintaining several .NET MVC web applications that enforce the
-                                        3 major effluent regulations in Canada.
+                                        4 major effluent regulations in Canada.
                                     </li>
                                     <li>
                                         Wrote SQL scripts to generate test cases for performance testing, and a Windows program that
@@ -75,7 +75,7 @@ class Experience extends React.Component {
                                         numerous potential sponsors.
                                     </li>
                                     <li>
-                                        In charge of purchasing require items, booking locations for events and tracking inventories.
+                                        In charged of purchasing event items, booking locations and keeping track of inventories.
                                     </li>
                                 </ul>
                             </Row>

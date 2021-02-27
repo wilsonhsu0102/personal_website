@@ -55,7 +55,7 @@ class ContactMe extends React.Component {
     render() {
         let currentYear = new Date().getFullYear();
         return (
-            <div id="contact">
+            <div id="contact" className="page-div">
                 <div className="particle-div">
                     <Particles
                         className="particle-bg"

@@ -6,12 +6,17 @@ import BigProjectCarousel from './BigProjectCarousel.jsx';
 import screenShot from '../Resources/Screenshot.png';
 import screenShot2 from '../Resources/Screenshot2.png';
 import NDTP1 from '../Resources/NDTP1.png';
-import EtherRide1 from '../Resources/EtherRide1.png';
-import EtherRide2 from '../Resources/EtherRide2.jpg';
+import ER1 from '../Resources/ER1.png';
+import ER2 from '../Resources/ER2.jpg';
 import UNI1 from '../Resources/UNI1.png';
 import UNI2 from '../Resources/UNI2.png';
 import UNI3 from '../Resources/UNI3.png';
 import UNI4 from '../Resources/UNI4.png';
+import PW1 from '../Resources/PW1.png';
+import PW2 from '../Resources/PW2.png';
+import PW3 from '../Resources/PW3.png';
+import PW4 from '../Resources/PW4.png';
+import PW5 from '../Resources/PW5.png';
 import CarouselGallery from './CarouselGallery.jsx';
 
 const data = [
@@ -32,9 +37,9 @@ const data = [
     },
     {
         name: 'EtherRide',
-        image: EtherRide1,
+        image: ER1,
         modal: {
-            images: [EtherRide1, EtherRide2],
+            images: [ER1, ER2],
             date: "Jan. 2019",
             link1: "https://github.com/yuxuanyao/EtherRide",
             link1Description: "Repo Link",
@@ -55,20 +60,24 @@ const data = [
             link1Description: "Repo Link",
             link2: "https://shrouded-oasis-64494.herokuapp.com/",
             link2Description: "Website Link",
-            description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."]
+            description: ["A MERN web application built to help university students plan events during busy school days, shorten the distance between \"UNI\"."
+                , "Users can upload pictures, customize profile and connect with others if the ❤️ is mutual."
+                , "Supports account validation, administrator mode, real time chatting, event planning."]
         }
     },
     {
-        name: 'Ripe Malinka',
-        image: screenShot,
+        name: 'Personal Website',
+        image: PW1,
         modal: {
-            images: [screenShot2, screenShot],
-            date: "Sep. 2020",
-            link1: "https://github.com/wilsonhsu0102/UNI",
+            images: [PW1, PW2, PW3, PW4, PW5],
+            date: "Jan. 2021",
+            link1: "https://github.com/wilsonhsu0102/person_website",
             link1Description: "Repo Link",
             link2: "",
             link2Description: "",
-            description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non eros velit. Aenean id porttitor turpis. Integer sed mi pretium, sagittis augue in, commodo odio. Vestibulum cursus sollicitudin sem, eu sollicitudin felis consequat nec. Etiam eleifend feugiat ex sed ornare. Nam a sapien rhoncus, dignissim tellus non, interdum nisi. Donec sit amet nisi aliquet, lobortis dui sed, egestas mauris. Pellentesque luctus viverra ligula sit amet facilisis. Integer eu magna sit amet quam suscipit gravida. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas. Mauris a ante in neque interdum fermentum nec non velit. Sed accumsan nisl quis quam imperdiet imperdiet. Etiam in viverra dolor, ut porta magna. Ut ut urna eget quam maximus egestas."]
+            description: ["A fully responsive React website that presents part of me and the experience that I have."
+                , "Built with various fun and famous frameworks such as Bootstrap, EmailJS, React-Spring, React-Particles, React-Scroll, etc."
+                , "Please contact me via the \"Leave me a message\" section at the bottom of the page if you have suggestions about this website"]
         }
     },
     {
@@ -129,16 +138,16 @@ class Project extends React.Component {
         let modalLinkDate;
         if (displayElement.modal.link2 !== "") {
             modalLinkDate =
-            (<Row className="description modal-date-link justify-content-center">
-                {displayElement.modal.date} | <a className="modal-link" href={displayElement.modal.link1} rel="noreferrer" target="_blank">{displayElement.modal.link1Description}</a>&nbsp;&nbsp;| <a className="modal-link" href={displayElement.modal.link2} rel="noreferrer" target="_blank">{displayElement.modal.link2Description}</a>
-            </Row>)
+                (<Row className="description modal-date-link justify-content-center">
+                    {displayElement.modal.date} | <a className="modal-link" href={displayElement.modal.link1} rel="noreferrer" target="_blank">{displayElement.modal.link1Description}</a>&nbsp;&nbsp;| <a className="modal-link" href={displayElement.modal.link2} rel="noreferrer" target="_blank">{displayElement.modal.link2Description}</a>
+                </Row>)
         } else {
             modalLinkDate =
-            (<Row className="description modal-date-link justify-content-center">
-                {displayElement.modal.date} | <a className="modal-link" href={displayElement.modal.link1} rel="noreferrer" target="_blank">{displayElement.modal.link1Description}</a>
-            </Row>)
+                (<Row className="description modal-date-link justify-content-center">
+                    {displayElement.modal.date} | <a className="modal-link" href={displayElement.modal.link1} rel="noreferrer" target="_blank">{displayElement.modal.link1Description}</a>
+                </Row>)
         }
-        
+
         let modal =
             (<Modal className="project-modal" centered size="lg" show={this.state.modalShow} onHide={this.handleClose}>
                 <Modal.Header closeButton>
