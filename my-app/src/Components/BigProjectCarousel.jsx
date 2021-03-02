@@ -130,15 +130,17 @@ class BigProjectCarousel extends React.Component {
                             </div>
                         </animated.div>
                     )}
-                </Spring>)
+                </Spring>
+            )
         })
         if (this.props.stopSpinning) {
             clearInterval(this.autoSpin)
         }
         return (
-            <div className="desktop-project-carousel">
+            <div>
                 {carousel}
-            </div>);
+            </div>
+        );
     }
 }
 

@@ -70,8 +70,9 @@
     padding: 5px 15px;
 }
 
-.desktop-project-carousel {
-    padding-bottom: 10vh;
+.big-carousel-paging{
+    margin: 0 auto 2% auto;
+    color: black;
 }
 
 .project-mobile-carousel {
@@ -116,10 +117,6 @@
 
 .modal-date-link {
     margin: 1% 0 1% 0;
-}
-
-.modal-link {
-    margin-left: 0.5em;
 }
 
 .sm-carousel-image {
