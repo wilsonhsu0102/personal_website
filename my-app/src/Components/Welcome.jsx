@@ -60,19 +60,12 @@ class Welcome extends React.Component {
                     <Typed
                         className="welcome-looped-text"
                         style={this.state.welcomeTextStyle}
-                        strings={["I'm a software developer.", "I'm based in Toronto."]}
+                        strings={["I'm a software engineer.", "I study at UofT.", "I'm interested in A.I."]}
                         typeSpeed={80}
                         backSpeed={30}
                         backDelay={500}
                         loop
                     />
-                    <div class="dec_1 text-dec"></div>
-                    <div class="dec_2 text-dec"></div>
-                    <div class="dec_3 text-dec"></div>
-                    <div class="dec_4 text-dec"></div>
-                    <div class="dec_5 text-dec"></div>
-                    <div class="dec_6 text-dec"></div>
-                    <div class="dec_7 text-dec"></div>
                 </div>
                 <Button className="welcome-btn" onMouseEnter={this.changeRed} onMouseLeave={this.changeOriginal} onClick={() => scroller.scrollTo('about', {
                     smooth: true,

@@ -21,10 +21,24 @@ import LO5 from '../Resources/LO5.gif';
 import LO6 from '../Resources/LO6.gif';
 import LO7 from '../Resources/LO7.gif';
 import LO8 from '../Resources/LO8.gif';
-
+import GC1 from '../Resources/GC1.png';
+import GC2 from '../Resources/GC2.png';
 import CarouselGallery from './CarouselGallery.jsx';
 
 const data = [
+    {
+        name: 'Personal Website',
+        image: PW1,
+        modal: {
+            images: [PW1, PW2, PW3, PW4, PW5],
+            date: "Jan. 2021",
+            links: ["https://github.com/wilsonhsu0102/person_website"],
+            linkDescriptions: ["Repo Link"],
+            description: ["A fully responsive React website that presents part of me and the experience that I have."
+                , "Built with various fun and famous frameworks such as Bootstrap, EmailJS, React-Spring, React-Particles, React-Scroll, etc."
+                , "Please contact me via the \"Leave me a message\" section at the bottom of the page if you have suggestions about this website"]
+        }
+    },
     {
         name: 'Neural Dependency Parser',
         image: NDTP1,
@@ -65,19 +79,6 @@ const data = [
         }
     },
     {
-        name: 'Personal Website',
-        image: PW1,
-        modal: {
-            images: [PW1, PW2, PW3, PW4, PW5],
-            date: "Jan. 2021",
-            links: ["https://github.com/wilsonhsu0102/person_website"],
-            linkDescriptions: ["Repo Link"],
-            description: ["A fully responsive React website that presents part of me and the experience that I have."
-                , "Built with various fun and famous frameworks such as Bootstrap, EmailJS, React-Spring, React-Particles, React-Scroll, etc."
-                , "Please contact me via the \"Leave me a message\" section at the bottom of the page if you have suggestions about this website"]
-        }
-    },
-    {
         name: 'LiftOvers Management Web Application',
         image: LO1,
         modal: {
@@ -88,6 +89,18 @@ const data = [
             description: ["Designed, developed and delivered a management web application for a NPO named LiftOvers, who's main goal is to reduce food waste around the Toronto region."
                 , "The purpose of the application is to create an automated solution that would cut down the human resource expenditure on processing lift requests and recording keeping purposes."
                 , "Functionality includes: User validation, Administrator access, Twilio integration, Lift request confirmations and tracking, User information updates."]
+        }
+    },
+    {
+        name: 'Game Centre',
+        image: GC1,
+        modal: {
+            images: [GC1, GC2],
+            date: "Oct. 2017",
+            links: ["https://github.com/wilsonhsu0102/minimax_puzzle_solver"],
+            linkDescriptions: ["Repo link"],
+            description: ["A game centre console app that consist of two basic games: Subtract Square, Stone Henge",
+                "User can choose to play against AI player that is implemented with minimax algorithm."]
         }
     }
 ]
@@ -129,10 +142,10 @@ class Project extends React.Component {
     }
 
     createDateLink = (displayElement) => {
-        let dateLink = [displayElement.modal.date]
+        let dateLink = [<div key="date">{displayElement.modal.date}</div>]
         for (let i = 0; i < displayElement.modal.links.length; i++) {
-            dateLink.push(<div>&nbsp;|&nbsp;</div>)
-            dateLink.push(<a href={displayElement.modal.links[i]} rel="noreferrer" target="_blank">{displayElement.modal.linkDescriptions[i]}</a>)
+            dateLink.push(<div key={"linkDivider" + i.toString()}>&nbsp;|&nbsp;</div>)
+            dateLink.push(<a key={"link" + i.toString()} href={displayElement.modal.links[i]} rel="noreferrer" target="_blank">{displayElement.modal.linkDescriptions[i]}</a>)
         }
         return dateLink
     }
@@ -157,8 +170,8 @@ class Project extends React.Component {
                     </Row>
                     <div className="modal-divider"></div>
                     <ul>
-                        {displayElement.modal.description.map((item) => {
-                            return <li className="description">{item}</li>
+                        {displayElement.modal.description.map((item, i) => {
+                            return <li key={"modalDescription" + i} className="description">{item}</li>
                         })}
                     </ul>
                 </Modal.Body>

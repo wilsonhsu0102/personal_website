@@ -116,7 +116,7 @@ class ContactMe extends React.Component {
                                     Leave me a message
                                 </Col>
                             </Row>
-                            <Form.Row className="contact-form-row" controlId="formSenderName">
+                            <Form.Row className="contact-form-row">
                                 <Col xs="12" md="3">
                                     <Form.Label className="contact-msg-category">Your  name</Form.Label>
                                 </Col>
@@ -124,7 +124,7 @@ class ContactMe extends React.Component {
                                     <Form.Control type="name" ref={this.emailSender} />
                                 </Col>
                             </Form.Row>
-                            <Form.Row className="contact-form-row" controlId="formInfo">
+                            <Form.Row className="contact-form-row">
                                 <Col xs="12" md="3">
                                     <Form.Label className="contact-msg-category">Let me know</Form.Label>
                                 </Col>
