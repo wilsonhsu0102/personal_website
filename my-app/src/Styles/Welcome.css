@@ -14,6 +14,7 @@
     top: 0;
     height: 3px; 
     background-color: white;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
 .welcome-looped-text {
@@ -39,6 +40,7 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    text-shadow: 5px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 .welcome-btn, .welcome-btn:focus {

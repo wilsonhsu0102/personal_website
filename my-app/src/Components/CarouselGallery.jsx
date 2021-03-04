@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image, Carousel } from 'react-bootstrap';
-import '../Styles/CarouselGallery.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -18,7 +17,7 @@ class CarouselGallery extends React.Component {
             )
         })
         return (
-            <Carousel animation="false" interval={null} prevIcon={<FontAwesomeIcon className="carousel-pointer carousel-container" icon={faAngleLeft} size="3x" />} 
+            <Carousel animation="false" interval={null} prevIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleLeft} size="3x" />} 
             nextIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleRight} size="3x" />}>
                 {carouselItems}
             </Carousel>);

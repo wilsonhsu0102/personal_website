@@ -1,9 +1,11 @@
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import resume from './WilsonHsu_Resume.pdf';
 
-import profilePic from './Profile.png';
+import profilePic1 from './Profile1.jpg';
+import profilePic2 from './Profile2.png';
+import profilePic3 from './Profile3.jpg';
 
 const contents =
 {
@@ -54,7 +56,7 @@ const contents =
             navText: "About me",
             title: "About Me",
             id: "about",
-            profileImg: profilePic,
+            profileImgs: [profilePic1, profilePic2, profilePic3],
             description: "Hi! I am Wilson, happy to have you and here is a little background about me.👨‍💻<br /><br />" +
             "I'm a 4<sup>th</sup> year Computer Science student at University of Toronto, currently on my coop term, working for Environment and Climate Change Canada as a Web Application Developer.<br /><br />" +
             "Computers have always been a thing to me when I was growing up. In the beginning it was simply for games, then it got a whole lot more interesting after I learned to look into the logic (🧙‍♂️ the magic) behind the screen." +

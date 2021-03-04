@@ -11,9 +11,7 @@ class Welcome extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            flash: 1,
-            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(0, 0, 0, 0.7)' },
-            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.7)' }
+            flash: 1
         }
         this.content = this.props.content
     }
@@ -29,21 +27,7 @@ class Welcome extends React.Component {
     componentWillUnmount() {
         clearInterval(this.flash);
     }
-
-    changeOriginal = () => {
-        this.setState({
-            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(0, 0, 0, 0.7)' },
-            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.7)' }
-        })
-    }
-
-    changeRed = () => {
-        this.setState({
-            welcomeTextStyle: { textShadow: '5px 1px 5px rgba(255, 37, 37, 1)' },
-            welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(255, 37, 37, 1)' }
-        })
-    }
-
+    
     render() {
         let styleList = []
         for (let i = 1; i < 4; i++) {
@@ -56,11 +40,10 @@ class Welcome extends React.Component {
         return (
             <div id={this.content.id}>
                 <div className="welcome-center">
-                    <div className="welcome-text" style={this.state.welcomeTextStyle}>{this.content.titleText}</div>
-                    <div className="welcome-line" style={this.state.welcomeBoxStyle}></div>
+                    <div className="welcome-text">{this.content.titleText}</div>
+                    <div className="welcome-line"></div>
                     <Typed
                         className="welcome-looped-text"
-                        style={this.state.welcomeTextStyle}
                         strings={this.content.typedText}
                         typeSpeed={80}
                         backSpeed={30}
@@ -68,7 +51,7 @@ class Welcome extends React.Component {
                         loop
                     />
                 </div>
-                <Button className="welcome-btn" onMouseEnter={this.changeRed} onMouseLeave={this.changeOriginal} onClick={() => scroller.scrollTo('about', {
+                <Button className="welcome-btn" onClick={() => scroller.scrollTo('about', {
                     smooth: true,
                     duration: 700,
                 })}>

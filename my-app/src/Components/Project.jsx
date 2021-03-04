@@ -79,7 +79,7 @@ const data = [
         }
     },
     {
-        name: 'LiftOvers Management Web Application',
+        name: 'LiftOvers',
         image: LO1,
         modal: {
             images: [LO1, LO2, LO5, LO6, LO7, LO8],
@@ -190,7 +190,7 @@ class Project extends React.Component {
                     {modal}
                 </Row>
                 <Row className="big-carousel-paging description" style={showPaging}>
-                    &#60;&nbsp;{this.state.currentSlideIdx + 1}/{this.state.data.length}&nbsp;&#62;
+                    &#8226;&#8226;&nbsp;{this.state.currentSlideIdx + 1}/{this.state.data.length}&nbsp;&#8226;&#8226;
                 </Row>
                 <Row className="justify-content-center project-end">
                     <Col xs={{ offset: 0 }} md={{ offset: 1 }}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
-import '../Styles/CarouselGallery.css'
 import { Spring, animated } from 'react-spring/renderprops';
 
 const position = {
@@ -105,28 +104,35 @@ class BigProjectCarousel extends React.Component {
             let nextPos;
             let clickFunc;
             let hoverEffect;
+            let itemNameStyle;
             if (i === this.state.main) {
                 nextPos = position["project-main"];
                 hoverEffect = "project-main"
+                itemNameStyle = "overlay-main"
             } else if (i === this.state.left) {
                 nextPos = position["project-left"];
                 clickFunc = this.spinRight
+                itemNameStyle = "overlay-left"
                 hoverEffect = "project-left"
             } else if (i === this.state.right) {
                 nextPos = position["project-right"];
                 clickFunc = this.spinLeft
                 hoverEffect = "project-right"
+                itemNameStyle = "overlay-right"
             } else {
                 nextPos = position["project-none"];
                 hoverEffect = "project-none"
+                itemNameStyle = "overlay-none"
             }
             return (
                 <Spring key={i} config={customConfig} to={nextPos}>
                     {props => (
                         <animated.div className={"project-item " + hoverEffect} style={props} onClick={i === this.state.main ? () => this.props.showModal(i) : clickFunc}>
                             <Image className="project-item-image" src={d.image} />
-                            <div className="carousel-text description" style={i !== this.state.main ? { backgroundColor: 'rgb(169, 169, 169)' } : {}}>
-                                {d.name}
+                            <div className="carousel-overlay">
+                                <div className={"carousel-text " + itemNameStyle} >
+                                    {d.name}
+                                </div>
                             </div>
                         </animated.div>
                     )}

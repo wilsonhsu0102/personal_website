@@ -5,14 +5,23 @@ import { Button, Image, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import Particles from 'react-particles-js';
-import resume from '../Resources/WilsonHsu_Resume.pdf';
 
 class AboutMe extends React.Component {
     constructor(props) {
         super(props)
         this.content = this.props.content
         this.links = this.props.links
+        this.state = {
+            profileIdx: 0
+        }
     }
+
+    changeProfile = () => {
+        this.setState({
+            profileIdx: this.state.profileIdx === this.content.profileImgs.length - 1 ? 0 : this.state.profileIdx + 1 
+        })
+    }
+
     render() {
         let contactLinks = this.links.map((link) => {
             return (
@@ -23,6 +32,7 @@ class AboutMe extends React.Component {
                 </Col>
             );
         })
+        let profileImg = this.content.profileImgs[this.state.profileIdx]
         return (
             <div id={this.content.id}>
                 <div className="particle-div">
@@ -35,7 +45,7 @@ class AboutMe extends React.Component {
                     <Row className="about-info-box justify-content-center">
                         <Col className="about-title-row" xs={{ span: 12 }}><div className="section-title about-title">{this.content.title}</div></Col>
                         <Col xs={{ span: 12 }} md={{ span: 3 }}>
-                            <Row><Image className="about-profile-pic" src={this.content.profileImg} roundedCircle /></Row>
+                            <Row><Image className="about-profile-pic" src={profileImg} roundedCircle onClick={this.changeProfile}/></Row>
                             <Row>
                                 {contactLinks}
                             </Row>
