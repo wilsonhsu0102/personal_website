@@ -5,10 +5,14 @@ import rocsautLogo from '../Resources/ROCSAUTLogo.png';
 import ECCCLogo from '../Resources/ECCCLogo.png';
 
 class Experience extends React.Component {
+    constructor(props) {
+        super(props)
+        this.content = this.props.content
+    }
     // Possible upgrades in the future: Shifting whole exp-container a little to the right and add a timeline on the right side of the page.
     render() {
         return (
-            <div id="experience" className="page-div">
+            <div id={this.content.id} className="page-div">
                 <Container className="experience-container">
                     <Row className="justify-content-center">
                         <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-left"> </div> </Col>

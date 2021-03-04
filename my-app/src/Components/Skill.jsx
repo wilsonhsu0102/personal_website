@@ -3,9 +3,13 @@ import '../Styles/Skill.css';
 import { Container, Row, Col } from 'react-bootstrap'
 
 class Skill extends React.Component {
+    constructor(props) {
+        super(props)
+        this.content = this.props.content
+    }
     render() {
         return (
-            <div id="skill" className="page-div">
+            <div id={this.content.id} className="page-div">
                 <Container className="experience-container">
                     <Row className="justify-content-center">
                         <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-left"> </div> </Col>

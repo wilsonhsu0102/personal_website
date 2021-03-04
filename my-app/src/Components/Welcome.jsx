@@ -15,6 +15,7 @@ class Welcome extends React.Component {
             welcomeTextStyle: { textShadow: '5px 1px 5px rgba(0, 0, 0, 0.7)' },
             welcomeBoxStyle: { boxShadow: '5px 0px 5px rgba(0, 0, 0, 0.7)' }
         }
+        this.content = this.props.content
     }
 
     componentDidMount() {
@@ -53,14 +54,14 @@ class Welcome extends React.Component {
             }
         }
         return (
-            <div id="welcome">
+            <div id={this.content.id}>
                 <div className="welcome-center">
-                    <div className="welcome-text" style={this.state.welcomeTextStyle}>Hi, I am Wilson Hsu</div>
+                    <div className="welcome-text" style={this.state.welcomeTextStyle}>{this.content.titleText}</div>
                     <div className="welcome-line" style={this.state.welcomeBoxStyle}></div>
                     <Typed
                         className="welcome-looped-text"
                         style={this.state.welcomeTextStyle}
-                        strings={["I'm a software engineer.", "I study at UofT.", "I'm interested in A.I."]}
+                        strings={this.content.typedText}
                         typeSpeed={80}
                         backSpeed={30}
                         backDelay={500}

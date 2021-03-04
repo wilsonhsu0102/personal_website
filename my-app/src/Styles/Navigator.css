@@ -5,8 +5,7 @@
 .navbar-block {
     width: fit-content;
     margin: 0 auto;
-    font-family: 'Inconsolata', monospace;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link {

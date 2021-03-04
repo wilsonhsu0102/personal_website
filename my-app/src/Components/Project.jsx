@@ -115,6 +115,7 @@ class Project extends React.Component {
             stopSpinning: false,
             data: data
         }
+        this.content = this.props.content
     }
 
     componentDidMount() {
@@ -177,7 +178,7 @@ class Project extends React.Component {
                 </Modal.Body>
             </Modal>)
         return (
-            <div id="project" className="page-div">
+            <div id={this.content.id} className="page-div">
                 <Row className="justify-content-center project-title">
                     <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-left"> </div> </Col>
                     <Col xs="auto" className="section-title"> Project </Col>

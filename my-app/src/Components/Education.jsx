@@ -6,9 +6,13 @@ import { faSquareRootAlt, faCertificate, faBrain, faGraduationCap, faCode } from
 import UofTLogo from '../Resources/UofTLogo.png';
 
 class Education extends React.Component {
+    constructor(props) {
+        super(props)
+        this.content = this.props.content
+    }
     render() {
         return (
-            <div id="education" className="page-div">
+            <div id={this.content.id} className="page-div">
                 <Container className="education-container">
                     <Row className="justify-content-center">
                         <Col xs={{ offset: 0 }} md={{ offset: 1 }}> <div className="title-horizontal-left"> </div> </Col>
@@ -58,7 +62,7 @@ class Education extends React.Component {
                                     <FontAwesomeIcon icon={faCertificate} />
                                 </Col>
                                 <Col xs="12" lg="auto">
-                                    cGPA:3.83/4.00
+                                    CGPA:3.83/4.00
                                 </Col>
                             </Row>
                         </Col>

@@ -22,6 +22,8 @@ class ContactMe extends React.Component {
                 display: 'none'
             }
         }
+        this.content = this.props.content
+        this.links = this.props.links
     }
     sendEmail = (e) => {
         e.preventDefault();
@@ -55,7 +57,7 @@ class ContactMe extends React.Component {
     render() {
         let currentYear = new Date().getFullYear();
         return (
-            <div id="contact" className="page-div">
+            <div id={this.content.id} className="page-div">
                 <div className="particle-div">
                     <Particles
                         className="particle-bg"
