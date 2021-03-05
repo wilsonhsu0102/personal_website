@@ -14,7 +14,7 @@
 .education-info {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em; 
+    font-size: 0.8em;
 }
 
 .education-svg {
@@ -59,6 +59,10 @@
         padding: 0 20%;
     }
 
+    .education-info {
+        font-size: 1em;
+    }
+
     .education-course-title {
         display: inline-block;
     }
@@ -78,6 +82,10 @@
 @media only screen and (min-width: 1200px) {
     .education-uoftlogo {
         padding: 0 0 0 17%;
+    }
+
+    .education-info {
+        font-size: 1.2em;
     }
 
     .education-svg {

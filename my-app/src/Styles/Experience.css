@@ -6,12 +6,16 @@
     width: 70%;
 }
 
+.experience-logo {
+    width: 100%;
+}
+
 .experience-content {
     padding-top: 3%;
 }
 
 .experience-loc-time {
-    margin: 1% 0 2% 0;
+    margin: 1% 0 1.2em 0;
 }
 
 .experience-description {
@@ -21,5 +25,11 @@
 @media only screen and (min-width: 768px) {
     .experience-title {
         font-size: 1.5vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .experience-logo {
+        padding: 0 !important;
     }
 }

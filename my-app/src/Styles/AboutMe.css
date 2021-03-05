@@ -4,12 +4,12 @@
     position:relative;
 }
 
-.about-title {
-    font-size: 20px !important;
-}
-
 .about-title-row {
     padding-bottom: 5%;
+}
+
+.about-profile-row {
+    padding: 5% 15% 0 15%;
 }
 
 .about-profile-pic {
@@ -47,7 +47,7 @@
 
 .about-descriptions {
     color: black;
-    text-align: left;
+    text-align: center;
 }
 
 .about-icon {
@@ -104,10 +104,6 @@
 }
 
 @media only screen and (min-width: 375px) {
-    .about-title {
-        font-size: 35px !important;
-    }
-
     .about-resume-btn {
         padding: 1% 30%;
     }
@@ -118,6 +114,10 @@
         padding-bottom: 2%;
     }
 
+    .about-profile-row {
+        padding: 0;
+    }
+
     .about-resume {
         margin-bottom: 0%;
     }
@@ -125,11 +125,8 @@
     .about-icon {
         padding-top: 20%;
     }
-}
 
-@media only screen and (min-width: 992px) {
-    .about-title {
-        font-size: 50px !important;
+    .about-descriptions { 
+        text-align: left;
     }
-    
 }

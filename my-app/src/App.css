@@ -26,7 +26,7 @@
 }
 
 .sub-title {
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
@@ -34,7 +34,7 @@
 .description {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 0.95em;
+  font-size: 0.6em;
 }
 
 .particle-bg {
@@ -102,6 +102,14 @@
     font-size: 28px;
   }
 
+  .sub-title {
+    font-size: 1.2em;
+  }
+
+  .description {
+    font-size: 0.9em;
+  }
+
   .svg-link {
     font-size: 2em !important;
   }
@@ -115,6 +123,14 @@
   .section-title {
     font-size: 35px;
   }
+
+  .sub-title {
+    font-size: 1.2em;
+  }
+
+  .description {
+    font-size: 0.8em;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -124,5 +140,13 @@
 
   .section-title {
     font-size: 50px;
+  }
+
+  .sub-title {
+    font-size: 1.6em;
+  }
+
+  .description {
+    font-size: 1em;
   }
 }

@@ -11,8 +11,16 @@
     position: relative;
     height: 100%;
     color: white;
-    margin: 8% auto 2% auto;
+    margin: 8% auto 0 auto;
     font-family: 'Montserrat', sans-serif;
+}
+
+.contact-sm-text {
+    font-size: 0.9em;
+}
+
+.contact-md-text {
+    font-size: 1em;
 }
 
 .contact-method {
@@ -29,12 +37,13 @@
 
 .contact-or-col {
     margin: 10% auto;
+    padding: 0;
 }
 
 .contact-horizontal-line {
     height: 0.5px;
     position: relative;
-    top: 15px;
+    top: 0.8em;
     background-color: white;
 }
 
@@ -51,17 +60,13 @@
 
 .copy-right-row1 {
     width: 100%;
-    margin-left: auto;
-    margin-right:auto;
-    margin-top: 10%;
-    padding-top: 1%;
+    margin: 5% auto 0.5em auto;
+    padding-top: 1em;
     border-top: 1.5px solid white;
 }
 
 .copy-right-row2 {
-    margin-left: auto;
-    margin-right:auto;
-    margin-top: 1%;
+    margin: 0.5em auto 1em auto;
 }
 
 .contact-msg-category {
@@ -139,10 +144,19 @@ input:focus, textarea:focus {
     transition-duration: 0.2s;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
+    .contact-msg-category {
+        float: right;
+        padding-right: 5%;
+    }
+
     .copy-right-row1 {
         width: 60%;
         margin-top: 2%;
+    }
+
+    .contact-or-col {
+        margin: auto auto;
     }
 
     .contact-or {
@@ -157,12 +171,5 @@ input:focus, textarea:focus {
 
     .email-sent-status {
         margin: 0 auto 0 auto;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .contact-msg-category {
-        float: right;
-        padding-right: 5%;
     }
 }

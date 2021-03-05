@@ -91,117 +91,6 @@ const contents =
             resume: resume
         },
         {
-            navText: "Education",
-            id: "education",
-            school: {
-                logo: UofTLogo,
-                infos: [
-                    {
-                        icon: faGraduationCap,
-                        detail: "H.B.Sc. | 2017 - 2022 (Expected)"
-                    }, {
-                        icon: faCode,
-                        detail: "Specialize in Computer Science"
-                    }, {
-                        icon: faBrain,
-                        detail: "Focus Area in Artificial Intelligence"
-                    }, {
-                        icon: faSquareRootAlt,
-                        detail: "Minor in Mathematics"
-                    }, {
-                        icon: faCertificate,
-                        detail: "CGPA:3.83/4.00"
-                    },
-                ]
-            },
-            courses: [
-                {
-                    code: "CSC301",
-                    title: "Intro. to Software Engineering",
-                    link: "https://fas.calendar.utoronto.ca/course/csc301h1"
-                }, {
-                    code: "CSC309",
-                    title: "Programming on the Web",
-                    link: "https://fas.calendar.utoronto.ca/course/csc309h1"
-                }, {
-                    code: "CSC311",
-                    title: "Intro. to Machine Learning",
-                    link: "https://fas.calendar.utoronto.ca/course/csc311h1"
-                }, {
-                    code: "CSC324",
-                    title: "Principles of Programming Languages",
-                    link: "https://fas.calendar.utoronto.ca/course/csc324h1"
-                }, {
-                    code: "CSC343",
-                    title: "Intro. to Databases",
-                    link: "https://fas.calendar.utoronto.ca/course/csc343h1"
-                }, {
-                    code: "CSC369",
-                    title: "Operating Systems",
-                    link: "https://fas.calendar.utoronto.ca/course/csc369h1"
-                }, {
-                    code: "CSC373",
-                    title: "Algorithm Design and Analysis",
-                    link: "https://fas.calendar.utoronto.ca/course/csc373h1"
-                }, {
-                    code: "CSC384",
-                    title: "Intro. to AI",
-                    link: "https://fas.calendar.utoronto.ca/course/csc384h1"
-                }, {
-                    code: "CSC485",
-                    title: "Computational Linguistics",
-                    link: "https://fas.calendar.utoronto.ca/course/csc485h1"
-                }
-            ]
-        },
-        {
-            navText: "Experience",
-            id: "experience",
-            experiences: [
-                {
-                    title: "Web Application Developer",
-                    companyLogo: ECCCLogo,
-                    brief: "Environment and Climate Change Canada | North York, ON | Aug. 2020 - Aug. 2021",
-                    details: [
-                        "Worked in an Agile team which is responsible for upgrading and maintaining several .NET MVC web applications that enforce the 4 major effluent regulations in Canada.",
-                        "Wrote SQL scripts to generate test cases for performance testing, and a Windows program that cleans/convert undesirable data formats in production database.",
-                        "Designed and developed the brand new Business Application Tracker app that is used to keep track and report all resource allocations within the Business e-Solution Division."
-                    ]
-                }, {
-                    title: "Vice-president of Operation",
-                    companyLogo: rocsautLogo,
-                    brief: "Taiwan (ROC) Student Association at UofT | Toronto, ON | Mar 2019 - Apr. 2020",
-                    details: [
-                        "Evaluated and managed all cash flows for our student association of over 200 active members.",
-                        "Recruited and lead a team of 8 people to engage in face-to-face meetings, phone calls, emails with numerous potential sponsors.",
-                        "In charged of purchasing event items, booking locations and keeping track of inventories."
-                    ]
-                }
-            ]
-        },
-        {
-            navText: "Skill",
-            id: "skill",
-            skills: [
-                {
-                    category: "Artificial Intelligence",
-                    tools: ["PyTorch", "Scikit-learn", "Keras", "NumPy"]
-                },
-                {
-                    category: "Programming Language",
-                    tools: ["Python", "C", "C#", "SQL", "Javascript", "HTML", "CSS", "Java", "Dr.Racket", "Haskell"]
-                },
-                {
-                    category: "Web Development",
-                    tools: ["ASP.NET", "Blazor", "Entity.js", "React", "Angular.js", "Express.js", "Node.js", "Bootstrap", "Postman", "Flask"]
-                },
-                {
-                    category: "Database",
-                    tools: ["SSMS", "MongoDB", "PostgreSQL"]
-                }
-            ]
-        },
-        {
             navText: "Project",
             id: "project",
             projects: [
@@ -281,6 +170,117 @@ const contents =
                         description: ["A game centre console app that consist of two basic games: Subtract Square, Stone Henge",
                             "User can choose to play against AI player that is implemented with minimax algorithm."]
                     }
+                }
+            ]
+        },
+        {
+            navText: "Experience",
+            id: "experience",
+            experiences: [
+                {
+                    title: "Web Application Developer",
+                    companyLogo: ECCCLogo,
+                    brief: "Environment and Climate Change Canada | North York, ON | Aug. 2020 - Aug. 2021",
+                    details: [
+                        "Worked in an Agile team which is responsible for upgrading and maintaining several .NET MVC web applications that enforce the 4 major effluent regulations in Canada.",
+                        "Wrote SQL scripts to generate test cases for performance testing, and a Windows program that cleans/convert undesirable data formats in production database.",
+                        "Designed and developed the brand new Business Application Tracker app that is used to keep track and report all resource allocations within the Business e-Solution Division."
+                    ]
+                }, {
+                    title: "Vice-president of Operation",
+                    companyLogo: rocsautLogo,
+                    brief: "Taiwan (ROC) Student Association at UofT | Toronto, ON | Mar 2019 - Apr. 2020",
+                    details: [
+                        "Evaluated and managed all cash flows for our student association of over 200 active members.",
+                        "Recruited and lead a team of 8 people to engage in face-to-face meetings, phone calls, emails with numerous potential sponsors.",
+                        "In charged of purchasing event items, booking locations and keeping track of inventories."
+                    ]
+                }
+            ]
+        },
+        {
+            navText: "Skill",
+            id: "skill",
+            skills: [
+                {
+                    category: "Artificial Intelligence",
+                    tools: ["PyTorch", "Scikit-learn", "Keras", "NumPy"]
+                },
+                {
+                    category: "Programming Language",
+                    tools: ["Python", "C", "C#", "SQL", "Javascript", "HTML", "CSS", "Java", "Dr.Racket", "Haskell"]
+                },
+                {
+                    category: "Web Development",
+                    tools: ["ASP.NET", "Blazor", "Entity.js", "React", "Angular.js", "Express.js", "Node.js", "Bootstrap", "Postman", "Flask"]
+                },
+                {
+                    category: "Database",
+                    tools: ["SSMS", "MongoDB", "PostgreSQL"]
+                }
+            ]
+        },
+        {
+            navText: "Education",
+            id: "education",
+            school: {
+                logo: UofTLogo,
+                infos: [
+                    {
+                        icon: faGraduationCap,
+                        detail: "H.B.Sc. | 2017 - 2022 (Expected)"
+                    }, {
+                        icon: faCode,
+                        detail: "Specialize in Computer Science"
+                    }, {
+                        icon: faBrain,
+                        detail: "Focus Area in Artificial Intelligence"
+                    }, {
+                        icon: faSquareRootAlt,
+                        detail: "Minor in Mathematics"
+                    }, {
+                        icon: faCertificate,
+                        detail: "CGPA:3.83/4.00"
+                    },
+                ]
+            },
+            courses: [
+                {
+                    code: "CSC301",
+                    title: "Intro. to Software Engineering",
+                    link: "https://fas.calendar.utoronto.ca/course/csc301h1"
+                }, {
+                    code: "CSC309",
+                    title: "Programming on the Web",
+                    link: "https://fas.calendar.utoronto.ca/course/csc309h1"
+                }, {
+                    code: "CSC311",
+                    title: "Intro. to Machine Learning",
+                    link: "https://fas.calendar.utoronto.ca/course/csc311h1"
+                }, {
+                    code: "CSC324",
+                    title: "Principles of Programming Languages",
+                    link: "https://fas.calendar.utoronto.ca/course/csc324h1"
+                }, {
+                    code: "CSC343",
+                    title: "Intro. to Databases",
+                    link: "https://fas.calendar.utoronto.ca/course/csc343h1"
+                }, {
+                    code: "CSC369",
+                    title: "Operating Systems",
+                    link: "https://fas.calendar.utoronto.ca/course/csc369h1"
+                }, {
+                    code: "CSC373",
+                    title: "Algorithm Design and Analysis",
+                    link: "https://fas.calendar.utoronto.ca/course/csc373h1"
+                }, {
+                    code: "CSC384",
+                    title: "Intro. to AI",
+                    link: "https://fas.calendar.utoronto.ca/course/csc384h1"
+                }, {
+                    code: "CSC485",
+                    title: "Computational Linguistics",
+                    link: "https://fas.calendar.utoronto.ca/course/csc485h1"
                 }
             ]
         },

@@ -53,7 +53,9 @@ class AboutMe extends React.Component {
                     <Row className="experience-content justify-content-center" noGutters>
                         {/* <Col className="about-title-row" xs={{ span: 12 }}><div className="section-title about-title">{this.content.title}</div></Col> */}
                         <Col xs={{ span: 12 }} md={{ span: 3 }}>
-                            <Row noGutters><Image className="about-profile-pic" src={profileImg} roundedCircle onClick={this.changeProfile} /></Row>
+                            <Row className="about-profile-row" noGutters>
+                                <Image className="about-profile-pic" src={profileImg} roundedCircle onClick={this.changeProfile} />
+                            </Row>
                             <Row>
                                 {contactLinks}
                             </Row>

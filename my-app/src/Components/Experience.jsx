@@ -12,7 +12,7 @@ class Experience extends React.Component {
         let experiences = this.content.experiences.map((exp, i) => {
             return (
                 <Row key={"experience" + i} className="experience-content justify-content-center">
-                    <Col xs="12" lg="3"><Image className="about-profile-pic" src={exp.companyLogo} /></Col>
+                    <Col xs="12" lg="3"><Image className="experience-logo education-uoftlogo" src={exp.companyLogo} /></Col>
                     <Col xs="12" lg="9">
                         <Row className="justify-content-center sub-title">
                             <Col xs="12">

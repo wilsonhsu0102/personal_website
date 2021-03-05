@@ -18,7 +18,8 @@ class ContactMe extends React.Component {
             },
             emailError: {
                 display: 'none'
-            }
+            },
+            errorMsg: "There was an error"
         }
         this.content = this.props.content
         this.links = this.props.links
@@ -26,7 +27,30 @@ class ContactMe extends React.Component {
     sendEmail = (e) => {
         e.preventDefault();
         const variables = { from_name: this.emailSender.current.value, message: this.emailContent.current.value };
-        emailjs.send(this.content.emailJS.serviceId, this.content.emailJS.templateId, variables, this.content.emailJS.userId)
+        if (variables.from_name === "") {
+            this.setState({
+                emailSuccess: {
+                    display: 'none'
+                },
+                emailError: {
+                    display: 'block'
+                },
+                errorMsg: "I would like to know your name. 🥺"
+            })
+            this.emailSender.current.focus()
+        } else if (variables.message === "") {
+            this.setState({
+                emailSuccess: {
+                    display: 'none'
+                },
+                emailError: {
+                    display: 'block'
+                },
+                errorMsg: "Nothing to tell me? 🥺"
+            })
+            this.emailContent.current.focus();
+        } else {
+            emailjs.send(this.content.emailJS.serviceId, this.content.emailJS.templateId, variables, this.content.emailJS.userId)
             .then(res => {
                 this.setState({
                     emailSuccess: {
@@ -46,10 +70,12 @@ class ContactMe extends React.Component {
                     },
                     emailError: {
                         display: 'block'
-                    }
+                    },
+                    errorMsg: "Something went wrong. 🥴"
                 })
                 console.log(err)
             })
+        }
     }
 
     render() {
@@ -73,7 +99,7 @@ class ContactMe extends React.Component {
                 </div>
                 <Container className="contact-container">
                     <Row className="contact-row">
-                        <Col xs="12" md="5">
+                        <Col xs="12" lg="5">
                             <Row>
                                 <Col className="contact-method">
                                     Get in touch with me at
@@ -83,43 +109,43 @@ class ContactMe extends React.Component {
                                 {contactLinks}
                             </Row>
                         </Col>
-                        <Col className="contact-or-col" xs="12" md="1">
+                        <Col className="contact-or-col" xs="12" lg="1">
                             <Row noGutters>
-                                <Col xs={{ span: 3, offset: 2 }} md={{ span: 3, offset: 0 }} className="contact-horizontal-line"></Col>
-                                <Col className="contact-method" xs="2" md="6">or</Col>
-                                <Col xs="3" md="3" className="contact-horizontal-line"></Col>
+                                <Col xs={{ span: 3, offset: 2 }} lg={{ span: 3, offset: 0 }} className="contact-horizontal-line"></Col>
+                                <Col xs="2" lg="6">or</Col>
+                                <Col xs="3" lg="3" className="contact-horizontal-line"></Col>
                             </Row>
                         </Col>
-                        <Col xs="12" md="6">
+                        <Col xs="12" lg="6">
                             <Row>
-                                <Col className="contact-method" xs={{ offset: 0, span: 12 }} md={{ offset: 3, span: 9 }}>
+                                <Col className="contact-method" xs={{ offset: 0, span: 12 }} lg={{ offset: 3, span: 9 }}>
                                     Leave me a message
                                 </Col>
                             </Row>
                             <Form.Row className="contact-form-row">
-                                <Col xs="12" md="3">
-                                    <Form.Label className="contact-msg-category">Your  name</Form.Label>
+                                <Col xs="12" lg="3">
+                                    <Form.Label className="contact-msg-category contact-sm-text">Your  name</Form.Label>
                                 </Col>
-                                <Col xs="12" md="9">
+                                <Col xs="12" lg="9">
                                     <Form.Control type="name" ref={this.emailSender} />
                                 </Col>
                             </Form.Row>
                             <Form.Row className="contact-form-row">
-                                <Col xs="12" md="3">
-                                    <Form.Label className="contact-msg-category">Let me know</Form.Label>
+                                <Col xs="12" lg="3">
+                                    <Form.Label className="contact-msg-category contact-sm-text">Let me know</Form.Label>
                                 </Col>
-                                <Col xs="12" md="9">
+                                <Col xs="12" lg="9">
                                     <Form.Control className="contact-msg-textArea" as="textarea" rows={3} type="info" ref={this.emailContent} />
                                 </Col>
                             </Form.Row>
                             <Row className="contact-form-row">
-                                <Col xs={{ offset: 0, span: 12 }} md={{ offset: 3, span: 6 }}>
-                                    <div className="email-success email-sent-status" style={this.state.emailSuccess}>Email sent successfully</div>
-                                    <div className="email-error email-sent-status" style={this.state.emailError}>There was an error</div>
+                                <Col xs={{ offset: 0, span: 12 }} lg={{ offset: 3, span: 6 }}>
+                                    <div className="email-success email-sent-status contact-sm-text" style={this.state.emailSuccess}>🌟Email sent successfully🌟</div>
+                                    <div className="email-error email-sent-status contact-sm-text" style={this.state.emailError}>{this.state.errorMsg}</div>
                                 </Col>
-                                <Col xs="12" md="3">
+                                <Col xs="12" lg="3">
                                     <Button className="contact-send-btn" variant="primary" type="submit" onClick={this.sendEmail}>
-                                        <div className="contact-send-text">Send</div>
+                                        <div className="contact-send-text contact-md-text">Send</div>
                                         <FontAwesomeIcon className="contact-send-svg" icon={faPaperPlane} />
                                     </Button>
                                 </Col>

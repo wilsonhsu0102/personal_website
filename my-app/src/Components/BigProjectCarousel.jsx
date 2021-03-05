@@ -143,7 +143,7 @@ class BigProjectCarousel extends React.Component {
             clearInterval(this.autoSpin)
         }
         return (
-            <div>
+            <div className="project-computer-carousel">
                 {carousel}
             </div>
         );

@@ -15,12 +15,12 @@ import contents from './Resources/Contents.js';
 function App() {
   const [welcome, setWelcome] = React.useState(false)
   const [aboutMe, setAboutMe] = React.useState(false)
-  const [education, setEducation] = React.useState(false)
-  const [experience, setExperience] = React.useState(false)
   const [project, setProject] = React.useState(false)
+  const [experience, setExperience] = React.useState(false)
   const [skill, setSkill] = React.useState(false)
+  const [education, setEducation] = React.useState(false)
   const [contactMe, setContactMe] = React.useState(false)
-  const pages = [welcome, aboutMe, education, experience, skill, project, contactMe]
+  const pages = [welcome, aboutMe, project, experience, skill, education, contactMe]
   return (
     <div className="App">
       <Navigator pages={pages} content={contents.pages} />
@@ -38,10 +38,10 @@ function App() {
           </Wrapper>
         )}
       </InView>
-      <InView threshold="0.5" onChange={setEducation}>
+      <InView threshold="0.5" onChange={setProject}>
         {({ ref }) => (
           <Wrapper ref={ref}>
-            <Education content={contents.pages[2]} />
+            <Project content={contents.pages[2]} />
           </Wrapper>
         )}
       </InView>
@@ -59,10 +59,10 @@ function App() {
           </Wrapper>
         )}
       </InView>
-      <InView threshold="0.5" onChange={setProject}>
+      <InView threshold="0.5" onChange={setEducation}>
         {({ ref }) => (
           <Wrapper ref={ref}>
-            <Project content={contents.pages[5]} />
+            <Education content={contents.pages[5]} />
           </Wrapper>
         )}
       </InView>
