@@ -4,8 +4,6 @@ import '../Styles/ContactMe.css';
 import ParticlesConfig from '../Resources/contact-particle-config.json';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebookF, faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import emailjs from 'emailjs-com';
 
@@ -28,7 +26,7 @@ class ContactMe extends React.Component {
     sendEmail = (e) => {
         e.preventDefault();
         const variables = { from_name: this.emailSender.current.value, message: this.emailContent.current.value };
-        emailjs.send('service_w4a75zg', 'template_pd4mq6p', variables, 'user_p4TidKTSLLuOWcfALVvLN')
+        emailjs.send(this.content.emailJS.serviceId, this.content.emailJS.templateId, variables, this.content.emailJS.userId)
             .then(res => {
                 this.setState({
                     emailSuccess: {
@@ -56,6 +54,15 @@ class ContactMe extends React.Component {
 
     render() {
         let currentYear = new Date().getFullYear();
+        let contactLinks = this.links.map((link) => {
+            return (
+                <Col className="contact-icon" xs="4" key={link.name}>
+                    <a href={link.href} target="_blank" rel="noreferrer" className="about-icon-effect">
+                        <FontAwesomeIcon className="svg-link" icon={link.icon} size="2x" />
+                    </a>
+                </Col>
+            );
+        })
         return (
             <div id={this.content.id} className="page-div">
                 <div className="particle-div">
@@ -73,36 +80,7 @@ class ContactMe extends React.Component {
                                 </Col>
                             </Row>
                             <Row className="contact-form-row justify-content-center">
-                                <Col className="contact-icon" xs="4">
-                                    <a href="https://www.linkedin.com/in/hsu-wilson/" target="_blank" rel="noreferrer" className="about-icon-effect">
-                                        <FontAwesomeIcon className="svg-link" icon={faLinkedinIn} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="contact-icon" xs="4">
-                                    <a href="https://github.com/wilsonhsu0102" target="_blank" rel="noreferrer" className="about-icon-effect">
-                                        <FontAwesomeIcon className="svg-link" icon={faGithub} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="contact-icon" xs="4">
-                                    <a href="mailto:wilsonhsu0102@gmail.com" className="about-icon-effect">
-                                        <FontAwesomeIcon className="svg-link" icon={faEnvelope} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="contact-icon" xs="4">
-                                    <a href="https://www.facebook.com/ho.ho.hotwheels/" target="_blank" rel="noreferrer" className="about-icon-effect">
-                                        <FontAwesomeIcon className="svg-link" icon={faFacebookF} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="contact-icon" xs="4">
-                                    <a href="https://www.instagram.com/3wheels.on/" target="_blank" rel="noreferrer" className="about-icon-effect">
-                                        <FontAwesomeIcon className="svg-link" icon={faInstagram} size="2x" />
-                                    </a>
-                                </Col>
-                                <Col className="contact-icon" xs="4">
-                                    <a href="https://twitter.com/wilsonhsu0102" target="_blank" rel="noreferrer" className="about-icon-effect">
-                                        <FontAwesomeIcon className="svg-link" icon={faTwitter} size="2x" />
-                                    </a>
-                                </Col>
+                                {contactLinks}
                             </Row>
                         </Col>
                         <Col className="contact-or-col" xs="12" md="1">
@@ -135,9 +113,9 @@ class ContactMe extends React.Component {
                                 </Col>
                             </Form.Row>
                             <Row className="contact-form-row">
-                                <Col xs={{offset: 0, span: 12}} md={{offset: 3, span: 6}}>
-                                    <div className="email-success email-sent-status" style={this.state.emailSuccess}> Email sent successfully </div>
-                                    <div className="email-error email-sent-status" style={this.state.emailError}> There was an error </div>
+                                <Col xs={{ offset: 0, span: 12 }} md={{ offset: 3, span: 6 }}>
+                                    <div className="email-success email-sent-status" style={this.state.emailSuccess}>Email sent successfully</div>
+                                    <div className="email-error email-sent-status" style={this.state.emailError}>There was an error</div>
                                 </Col>
                                 <Col xs="12" md="3">
                                     <Button className="contact-send-btn" variant="primary" type="submit" onClick={this.sendEmail}>

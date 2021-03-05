@@ -35,10 +35,7 @@
     width: 20%;
 }
 
-.skill-first-row-2 {
-    margin-top: 5%;
-}
-.skill-second-row {
+.skill-first-row-2, .skill-bottom-row {
     margin-top: 5%;
 }
 

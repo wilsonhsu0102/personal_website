@@ -22,12 +22,12 @@ class SmallProjectCarousel extends React.Component {
     }
 
     render() {
+        let showControls = this.props.data.length < 2 ? false : true;
         let carouselItems = this.props.data.map((d, i) => {
             return (
                 <Carousel.Item key={i} onClick={() => this.props.showModal(i)}>
                     <div className="sm-carousel-item">
                         <Image
-                            // onMouseEnter={this.displayOverlay}
                             className="d-block w-100 sm-carousel-image"
                             src={d.image}
                         />
@@ -37,11 +37,6 @@ class SmallProjectCarousel extends React.Component {
                             </div>
                         </div>
                     </div>
-                    {/* <Carousel.Caption className="sm-carousel-overlay">
-                        <div className="sm-carousel-text">
-                            {d.name}
-                        </div>
-                    </Carousel.Caption> */}
                 </Carousel.Item>
             )
         })
@@ -53,7 +48,7 @@ class SmallProjectCarousel extends React.Component {
         }
         return (
             <div className="project-mobile-carousel">
-                <Carousel onSelect={(eventKey) => { this.props.slideChange(eventKey) }} interval={time} defaultActiveIndex={this.props.startIdx} prevIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleLeft} size="3x" />}
+                <Carousel controls={showControls} onSelect={(eventKey) => { this.props.slideChange(eventKey) }} interval={time} defaultActiveIndex={this.props.startIdx} prevIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleLeft} size="3x" />}
                     nextIcon={<FontAwesomeIcon className="carousel-pointer" icon={faAngleRight} size="3x" />}>
                     {carouselItems}
                 </Carousel>

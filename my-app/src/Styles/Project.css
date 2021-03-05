@@ -25,11 +25,7 @@
     height: 80vh;
 }
 
-.modal-carousel-container {
-    width: 95%;
-    margin: 0 auto;
-}
-
+/* Modal Section */
 .modal-carousel-pointer{
     color: gray;
     z-index: 1000;
@@ -45,22 +41,34 @@
 .project-modal .modal-content {
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    border: 2px solid rgb(255, 37, 37);
-    box-shadow: inset 0 0 8px rgb(255, 37, 37), 0 0 15px rgb(255, 37, 37);
+    border: 1px solid white;
+    box-shadow: inset 0 0 8px white;
+    padding: 1% 2% 1% 2%;
 }
 
 .modal-header {
     border-bottom: 0px;
 }
 
+/* Need this so background image does not jump */
+.modal-open{
+    padding:0 !important;
+    overflow-y: inherit !important;
+}
+
+.modal-date-link {
+    margin: 1% 0 1% 0;
+}
+
 .close {
-    color: red;
+    color: whitesmoke;
     margin: -1rem 0 -1rem auto !important;
 }
 
 .close:hover {
     color: white;
 }
+/* Modal Section */
 
 .carousel-overlay {
     transition-duration: .5s;
@@ -143,16 +151,7 @@
     opacity: 0.8 !important;
 }
 
-/* Need this so background image does not jump */
-.modal-open{
-    padding:0 !important;
-    overflow-y: inherit !important;
-}
-
-.modal-date-link {
-    margin: 1% 0 1% 0;
-}
-
+/* Small Carousel */
 .sm-carousel-item:hover .sm-carousel-overlay {
     opacity: 1;
 }

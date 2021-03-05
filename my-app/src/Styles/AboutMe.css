@@ -19,7 +19,7 @@
 }
 
 .about-profile-pic:hover {
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     box-shadow: 0 0 20px rgb(60, 50, 50);
 }
 
