@@ -5,7 +5,7 @@
 }
 
 .about-title {
-    font-size: 25px !important;
+    font-size: 20px !important;
 }
 
 .about-title-row {
@@ -37,7 +37,7 @@
 .about-info-box {
     position: relative;
     margin: 0 auto;
-    padding: 2% 3% 5% 3%;
+    padding: 2% 3% 4% 3%;
     width: 70%;
     height: 100%;
     border-radius: 5px;
