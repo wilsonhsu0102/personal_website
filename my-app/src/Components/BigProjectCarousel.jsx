@@ -5,6 +5,7 @@ import { Spring, animated } from 'react-spring/renderprops';
 const position = {
     'project-main': {
         width: '50%',
+        height: '70%',
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
@@ -13,6 +14,7 @@ const position = {
     },
     'project-left': {
         width: '25%',
+        height: '35%',
         top: "50%",
         left: "12.5%",
         transform: "translate(-50%, -50%)",
@@ -21,6 +23,7 @@ const position = {
     },
     'project-right': {
         width: '25%',
+        height: '35%',
         top: "50%",
         left: "87.5%",
         transform: "translate(-50%, -50%)",
@@ -29,6 +32,7 @@ const position = {
     },
     'project-none': {
         width: '20%',
+        height: '30%',
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
