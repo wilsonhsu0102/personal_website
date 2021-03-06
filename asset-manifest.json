@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personal_website/static/css/main.394268c6.chunk.css",
+    "main.css": "/personal_website/static/css/main.865a1092.chunk.css",
     "main.js": "/personal_website/static/js/main.d1191a21.chunk.js",
     "main.js.map": "/personal_website/static/js/main.d1191a21.chunk.js.map",
     "runtime-main.js": "/personal_website/static/js/runtime-main.05e9f681.js",
@@ -12,7 +12,7 @@
     "static/js/3.6b095b59.chunk.js.map": "/personal_website/static/js/3.6b095b59.chunk.js.map",
     "index.html": "/personal_website/index.html",
     "static/css/2.ae9f1eb3.chunk.css.map": "/personal_website/static/css/2.ae9f1eb3.chunk.css.map",
-    "static/css/main.394268c6.chunk.css.map": "/personal_website/static/css/main.394268c6.chunk.css.map",
+    "static/css/main.865a1092.chunk.css.map": "/personal_website/static/css/main.865a1092.chunk.css.map",
     "static/js/2.7d354351.chunk.js.LICENSE.txt": "/personal_website/static/js/2.7d354351.chunk.js.LICENSE.txt",
     "static/media/ECCCLogo.af008915.png": "/personal_website/static/media/ECCCLogo.af008915.png",
     "static/media/ER1.b53100c4.png": "/personal_website/static/media/ER1.b53100c4.png",
@@ -48,7 +48,7 @@
     "static/js/runtime-main.05e9f681.js",
     "static/css/2.ae9f1eb3.chunk.css",
     "static/js/2.7d354351.chunk.js",
-    "static/css/main.394268c6.chunk.css",
+    "static/css/main.865a1092.chunk.css",
     "static/js/main.d1191a21.chunk.js"
   ]
 }
