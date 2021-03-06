@@ -47,16 +47,15 @@ class AboutMe extends React.Component {
                         <Col xs="auto" className="section-title about-title">{this.content.navText}</Col>
                         <Col> <div className="title-horizontal-right"> </div> </Col>
                         <Col xs="0" md="1"></Col>
-                        {/* <Col className="about-title-row" xs={{ span: 12 }}><div className="section-title about-title">{this.content.title}</div></Col> */}
-
                     </Row>
                     <Row className="experience-content justify-content-center" noGutters>
-                        {/* <Col className="about-title-row" xs={{ span: 12 }}><div className="section-title about-title">{this.content.title}</div></Col> */}
-                        <Col xs={{ span: 12 }} md={{ span: 3 }}>
+                        <Col xs={{ span: 12 }} md={{ span: 3 }} className="about-profile-col">
                             <Row className="about-profile-row" noGutters>
-                                <Image className="about-profile-pic" src={profileImg} roundedCircle onClick={this.changeProfile} />
+                                <div className="about-profile-container">
+                                    <Image className="about-profile-pic" src={profileImg} roundedCircle onClick={this.changeProfile} />
+                                </div>
                             </Row>
-                            <Row>
+                            <Row className="about-contact-row">
                                 {contactLinks}
                             </Row>
                         </Col>

@@ -40,7 +40,8 @@ class Welcome extends React.Component {
         return (
             <div id={this.content.id}>
                 <div className="welcome-center">
-                    <div className="welcome-text">{this.content.titleText}</div>
+                    <div className="welcome-text">Hi, I am</div>
+                    <div className="welcome-text">&nbsp;Wilson Hsu</div>
                     <div className="welcome-line"></div>
                     <Typed
                         className="welcome-looped-text"

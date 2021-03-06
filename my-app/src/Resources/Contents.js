@@ -71,7 +71,6 @@ const contents =
         {
             navText: "Welcome",
             id: "welcome",
-            titleText: "Hi, I am Wilson Hsu",
             typedText: [
                 "I'm a software engineer.",
                 "I study at UofT.",
