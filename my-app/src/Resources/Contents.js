@@ -2,8 +2,8 @@ import { faInstagram, faFacebookF, faLinkedinIn, faGithub, faTwitter } from '@fo
 import { faEnvelope, faSquareRootAlt, faCertificate, faBrain, faGraduationCap, faCode } from '@fortawesome/free-solid-svg-icons';
 
 // About me
-import profilePic1 from './Profile1.jpg';
-import profilePic2 from './Profile2.png';
+import profilePic1 from './Profile1.png';
+import profilePic2 from './Profile2.jpg';
 import profilePic3 from './Profile3.jpg';
 import resume from './WilsonHsu_Resume.pdf';
 // Education
