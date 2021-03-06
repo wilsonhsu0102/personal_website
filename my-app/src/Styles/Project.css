@@ -105,8 +105,8 @@
 }
 
 .project-item {
-    cursor: pointer;
     position: absolute;
+    height: fit-content;
 }
 
 .project-item-image {
@@ -142,10 +142,17 @@
 }
 
 .project-main:hover {
+    cursor: pointer;
     opacity: 1 !important;
 }
 
-.project-left:hover, .project-right:hover {
+.project-left:hover {
+    cursor: pointer;
+    opacity: 0.8 !important;
+}
+
+.project-right:hover {
+    cursor: pointer;
     opacity: 0.8 !important;
 }
 
@@ -183,7 +190,7 @@
     transform: translate(-50%, -50%);
 }
 
-.carousel-control-, .carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
     z-index: 1000;
 }
 
