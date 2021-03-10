@@ -47,7 +47,7 @@ class Education extends React.Component {
                     </Row>
                     <Row className="sub-title education-course justify-content-center">
                         <Col xs="12">
-                            Courses that interested me
+                            Some courses I took
                         </Col>
                         <Col xs="12">
                             <div className="skill-title-bar"></div>
