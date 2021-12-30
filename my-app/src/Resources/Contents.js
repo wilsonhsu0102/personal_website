@@ -179,7 +179,7 @@ const contents =
                 {
                     title: "Web Application Developer",
                     companyLogo: ECCCLogo,
-                    brief: "Environment and Climate Change Canada | North York, ON | Aug. 2020 - Aug. 2021",
+                    brief: "Environment and Climate Change Canada | North York, ON | Aug. 2020 - Present",
                     details: [
                         "Developed and maintained several ASP.NET MVC applications that are responsible for regulating and enforcing the 4 major effluent regulations in Canada.",
                         "Participated in all phases of the SDLC for our department-wide project that organizes 150+ web applications in ECCC.",
