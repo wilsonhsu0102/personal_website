@@ -1,5 +1,5 @@
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faSquareRootAlt, faCertificate, faBrain, faGraduationCap, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faSquareRootAlt, faCertificate, faMedal, faGraduationCap, faCode } from '@fortawesome/free-solid-svg-icons';
 
 // About me
 import profilePic1 from './Profile1.png';
@@ -73,8 +73,8 @@ const contents =
             id: "welcome",
             typedText: [
                 "I'm a software engineer.",
-                "I study at UofT.",
-                "I'm interested in A.I."
+                "I graduated from UofT.",
+                "I'm open for FT job."
             ]
         },
         {
@@ -181,18 +181,18 @@ const contents =
                     companyLogo: ECCCLogo,
                     brief: "Environment and Climate Change Canada | North York, ON | Aug. 2020 - Aug. 2021",
                     details: [
-                        "Worked in an Agile team which is responsible for upgrading and maintaining several .NET MVC web applications that enforce the 4 major effluent regulations in Canada.",
-                        "Wrote SQL scripts to generate test cases for performance testing, and a Windows program that cleans/convert undesirable data formats in production database.",
-                        "Designed and developed the brand new Business Application Tracker app that is used to keep track and report all resource allocations within the Business e-Solution Division."
+                        "Developed and maintained several ASP.NET MVC applications that are responsible for regulating and enforcing the 4 major effluent regulations in Canada.",
+                        "Participated in all phases of the SDLC for our department-wide project that organizes 150+ web applications in ECCC.",
+                        "Put together an UI testing suite using Selenium and set up CI pipeline for it on Azure DevOps."
                     ]
                 }, {
                     title: "Vice-president of Operation",
                     companyLogo: rocsautLogo,
                     brief: "Taiwan (ROC) Student Association at UofT | Toronto, ON | Mar 2019 - Apr. 2020",
                     details: [
-                        "Evaluated and managed all cash flows for our student association of over 200 active members.",
-                        "Recruited and lead a team of 8 people to engage in face-to-face meetings, phone calls, emails with numerous potential sponsors.",
-                        "In charged of purchasing event items, booking locations and keeping track of inventories."
+                        "Recruited and lead a team of 8 people to engage in face-to-face meetings, phone calls, email conversations with numerous potential sponsors of the student association.",
+                        "Evaluated and managed all cash flows for our student association of over 150 active members.",
+                        "Profited over $2,000 at the end of the year from sponsors and various events that the student association hosted."
                     ]
                 }
             ]
@@ -207,11 +207,11 @@ const contents =
                 },
                 {
                     category: "Programming Language",
-                    tools: ["Python", "C", "C#", "SQL", "Javascript", "HTML", "CSS", "Java", "Dr.Racket", "Haskell"]
+                    tools: ["Python", "Javascript", "C", "C#", "SQL", "HTML", "CSS", "Java", "Dr.Racket", "Haskell"]
                 },
                 {
                     category: "Web Development",
-                    tools: ["ASP.NET", "Blazor", "Entity.js", "React", "Angular.js", "Express.js", "Node.js", "Bootstrap", "Postman", "Flask"]
+                    tools: ["React", "Express.js", "Node.js", "Bootstrap", "Flask", "ASP.NET", "Blazor", "Entity.js", "Postman", "Selenium"]
                 },
                 {
                     category: "Database",
@@ -227,16 +227,16 @@ const contents =
                 infos: [
                     {
                         icon: faGraduationCap,
-                        detail: "H.B.Sc. | 2017 - 2022 (Expected)"
+                        detail: "H.B.Sc. | 2017 - 2021"
                     }, {
                         icon: faCode,
                         detail: "Specialize in Computer Science"
                     }, {
-                        icon: faBrain,
-                        detail: "Focus Area in Artificial Intelligence"
-                    }, {
                         icon: faSquareRootAlt,
                         detail: "Minor in Mathematics"
+                    }, {
+                        icon: faMedal,
+                        detail: "Dean's List Scholar"
                     }, {
                         icon: faCertificate,
                         detail: "CGPA:3.83/4.00"
@@ -265,6 +265,10 @@ const contents =
                     title: "Intro. to Databases",
                     link: "https://fas.calendar.utoronto.ca/course/csc343h1"
                 }, {
+                    code: "CSC367",
+                    title: "Parallel Programming",
+                    link: "https://fas.calendar.utoronto.ca/course/csc367h1"
+                }, {
                     code: "CSC369",
                     title: "Operating Systems",
                     link: "https://fas.calendar.utoronto.ca/course/csc369h1"
@@ -277,9 +281,17 @@ const contents =
                     title: "Intro. to AI",
                     link: "https://fas.calendar.utoronto.ca/course/csc384h1"
                 }, {
+                    code: "CSC454",
+                    title: "The Business of Software",
+                    link: "https://fas.calendar.utoronto.ca/course/csc454h1"
+                }, {
                     code: "CSC485",
                     title: "Computational Linguistics",
                     link: "https://fas.calendar.utoronto.ca/course/csc485h1"
+                }, {
+                    code: "CSC491",
+                    title: "Capstone Design Project",
+                    link: "https://fas.calendar.utoronto.ca/course/csc495h1"
                 }
             ]
         },
