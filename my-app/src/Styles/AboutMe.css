@@ -65,7 +65,7 @@
 
 .about-descriptions {
     color: black;
-    text-align: center;
+    text-align: justify !important;
 }
 
 .about-icon {

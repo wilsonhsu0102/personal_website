@@ -12,6 +12,11 @@ import UofTLogo from './UofTLogo.png';
 import rocsautLogo from '../Resources/ROCSAUTLogo.png';
 import ECCCLogo from '../Resources/ECCCLogo.png';
 // Projects
+import IM1 from '../Resources/IM1.png';
+import IM2 from '../Resources/IM2.png';
+import IM3 from '../Resources/IM3.png';
+import IM4 from '../Resources/IM4.gif';
+import IM5 from '../Resources/IM5.gif';
 import NDTP1 from '../Resources/NDTP1.png';
 import ER1 from '../Resources/ER1.png';
 import ER2 from '../Resources/ER2.jpg';
@@ -72,9 +77,9 @@ const contents =
             navText: "Welcome",
             id: "welcome",
             typedText: [
-                "I'm a software engineer.",
+                "I'm a software developer.",
                 "I graduated from UofT.",
-                "I'm open for FT job."
+                "I'm open for a FT job."
             ]
         },
         {
@@ -82,17 +87,35 @@ const contents =
             title: "About Me",
             id: "about",
             profileImgs: [profilePic1, profilePic2, profilePic3],
-            description: "Hi! I am Wilson, happy to have you and here is a little background about me.👨‍💻<br /><br />" +
-                "I'm a 4<sup>th</sup> year Computer Science student at University of Toronto, currently on my coop term, working for Environment and Climate Change Canada as a Web Application Developer.<br /><br />" +
-                "Computers have always been a thing to me when I was growing up. In the beginning it was simply for games, then it got a whole lot more interesting after I learned to look into the logic (🧙‍♂️ the magic) behind the screen. " +
-                "My world has changed since that moment. From replicating the Snake game by watching Youtube tutorials and building simple Email bot to annoy my friend. All that leads to later on winning an award with my team at a hackathon and learning to classify handwritten digits using convolutional neural network.<br /><br />" +
-                "It has been a great journey, and I can't wait to see what else is ahead for me. I am open to all opportunities, but Software Engneering and Machine Learning is of particular interest to me.",
+            description: "Hi! I am Wilson, welcome to my website and here is a little bit about myself.👨‍💻<br /><br />" +
+                "I recently graduated from the University of Toronto with a Honour Bachelor of Science degree in Computer " +
+                "Science. I am currently working part-time for Environment and Climate Change Canada as a Web Application Developer, " + 
+                "my main responsibility includes design, develop and maintain ASP.NET MVC web applications that accept regulation reports from the industries.<br /><br />" +
+                "Aside from being a passionate and goal-driven Software Developer, I have decent knowledge on algorithms, data structures, and " +
+                "project experience in areas, such as Promotional content marketplace, Web-scraping Facebook posts, Particle simulation with " +
+                "parallel programming, Crypto car rental app. Currently, I am most interested in learning and working with cloud applications, " +
+                "automation solutions and backend development.<br /><br />" +
+                "Don't hesitate to reach out!🎉"
+                ,
             resume: resume
         },
         {
             navText: "Project",
             id: "project",
             projects: [
+                {
+                    name: 'Inforum Marketing',
+                    image: IM1,
+                    modal: {
+                        images: [IM1, IM2, IM3, IM4, IM5],
+                        date: "Dec. 2021",
+                        links: ["https://github.com/dcsil/Inforum", "https://drive.google.com/file/d/1PJIiylXd2JDWF3O5YDPvfhbGYb_3E5Gq/view?usp=sharing"],
+                        linkDescriptions: ["Repo Link", "Demo Video"],
+                        description: ["A React/Node.js promotional content marketplace that specifically target the Millennial/Gen-Z generation."
+                            , "Users can share posted marketing campaigns to their social media to earn rewards points."
+                            , "Companies are able to utilize our website to promote their products, offerings, and even collect data on how their campaigns performed."]
+                    }
+                },
                 {
                     name: 'Personal Website',
                     image: PW1,
@@ -120,19 +143,6 @@ const contents =
                     }
                 },
                 {
-                    name: 'EtherRide',
-                    image: ER1,
-                    modal: {
-                        images: [ER1, ER2],
-                        date: "Jan. 2019",
-                        links: ["https://github.com/yuxuanyao/EtherRide", "https://devpost.com/software/etherride"],
-                        linkDescriptions: ["Repo Link", "DevPost Link"],
-                        description: ["Car rental app that won the Best Aragon App award at UofTHacksVI out of 100+ participating teams."
-                            , "Smart contract created/stored on the Ethereum Blockchain and managed using Aragon platform."
-                            , "Integrated SmartCar API to remotely lock/unlock smart vehicles once transactions are verified."]
-                    }
-                },
-                {
                     name: 'UNI',
                     image: UNI2,
                     modal: {
@@ -156,6 +166,19 @@ const contents =
                         description: ["Designed, developed and delivered a management web application for a NPO named LiftOvers, who's main goal is to reduce food waste around the Toronto region."
                             , "The purpose of the application is to create an automated solution that would cut down the human resource expenditure on processing lift requests and recording keeping purposes."
                             , "Functionality includes: User validation, Administrator access, Twilio integration, Lift request confirmations and tracking, User information updates."]
+                    }
+                },
+                {
+                    name: 'EtherRide',
+                    image: ER1,
+                    modal: {
+                        images: [ER1, ER2],
+                        date: "Jan. 2019",
+                        links: ["https://github.com/yuxuanyao/EtherRide", "https://devpost.com/software/etherride"],
+                        linkDescriptions: ["Repo Link", "DevPost Link"],
+                        description: ["Car rental app that won the Best Aragon App award at UofTHacksVI out of 100+ participating teams."
+                            , "Smart contract created/stored on the Ethereum Blockchain and managed using Aragon platform."
+                            , "Integrated SmartCar API to remotely lock/unlock smart vehicles once transactions are verified."]
                     }
                 },
                 {
