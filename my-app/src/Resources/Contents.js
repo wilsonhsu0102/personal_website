@@ -5,12 +5,14 @@ import { faEnvelope, faSquareRootAlt, faCertificate, faMedal, faGraduationCap, f
 import profilePic1 from './Profile1.png';
 import profilePic2 from './Profile2.jpg';
 import profilePic3 from './Profile3.jpg';
-import resume from './WilsonHsu_Resume.pdf';
+import resume from './Wilson_Hsu_Resume.pdf';
 // Education
 import UofTLogo from './UofTLogo.png';
 // Experiences
 import rocsautLogo from '../Resources/ROCSAUTLogo.png';
 import ECCCLogo from '../Resources/ECCCLogo.png';
+import CoinbaseLogo from '../Resources/Coinbase.svg.webp';
+
 // Projects
 import IM1 from '../Resources/IM1.png';
 import IM2 from '../Resources/IM2.png';
@@ -88,9 +90,8 @@ const contents =
             id: "about",
             profileImgs: [profilePic1, profilePic2, profilePic3],
             description: "Hi! I am Wilson, welcome to my website and here is a little bit about myself.👨‍💻<br /><br />" +
-                "I recently graduated from the University of Toronto with a Honour Bachelor of Science degree in Computer " +
-                "Science. I am currently working part-time for Environment and Climate Change Canada as a Web Application Developer, " + 
-                "my main responsibility includes design, develop and maintain ASP.NET MVC web applications that accept regulation reports from the industries.<br /><br />" +
+                "I graduated from the University of Toronto with a Honour Bachelor of Science degree in Computer " +
+                "Science. I have work experience at Coinbase and Environment and Climate Change Canada.<br /><br />" +
                 "Aside from being a passionate and goal-driven Software Developer, I have decent knowledge on algorithms, data structures, and " +
                 "project experience in areas, such as Promotional content marketplace, Web-scraping Facebook posts, Particle simulation with " +
                 "parallel programming, Crypto car rental app. Currently, I am most interested in learning and working with cloud applications, " +
@@ -200,13 +201,22 @@ const contents =
             id: "experience",
             experiences: [
                 {
+                    title: "Software Engineer",
+                    companyLogo: CoinbaseLogo,
+                    brief: "Coinbase | Remote, North America | May. 2022 - Jan. 2023",
+                    details: [
+                        "Designed and implemented new features on services that are responsible for all customer Kubernetes resource life cycle. Services are critical to Coinbase Cloud products and nearly every customer interaction on platform has to go through.",
+                        "Enhanced the Reaper Kubernetes CronJobs by upgrading resource protection logic, returns more precise and informative output message. Repaired the suspended CronJobs which estimated to save Coinbase Cloud $1M/year.",
+                        "Part of the tiger team to build an alert triggered auto-action service, which would save each dev team 20-40 hours per week from dealing with common incidents that can be resolved with a predefined Temporal workflow."
+                    ]
+                }, {
                     title: "Web Application Developer",
                     companyLogo: ECCCLogo,
-                    brief: "Environment and Climate Change Canada | North York, ON | Aug. 2020 - Present",
+                    brief: "Environment and Climate Change Canada | North York, ON | Aug. 2020 - Aug. 2021",
                     details: [
-                        "Developed and maintained several ASP.NET MVC applications that are responsible for regulating and enforcing the 4 major effluent regulations in Canada.",
-                        "Participated in all phases of the SDLC for our department-wide project that organizes 150+ web applications in ECCC.",
-                        "Put together an UI testing suite using Selenium and set up CI pipeline for it on Azure DevOps."
+                        "Involved in design discussions related to ECCC’s transition to cloud, built the POC app to test feasibility.",
+                        "Worked in all phases of the SDLC for our department-wide project that organizes 150+ web applications in ECCC.", 
+                        "Developed and maintained several MVC applications that are responsible for regulating and enforcing the 4 major effluent regulations in Canada."
                     ]
                 }, {
                     title: "Vice-president of Operation",
@@ -225,12 +235,8 @@ const contents =
             id: "skill",
             skills: [
                 {
-                    category: "Artificial Intelligence",
-                    tools: ["PyTorch", "Scikit-learn", "Keras", "NumPy"]
-                },
-                {
                     category: "Programming Language",
-                    tools: ["Python", "Javascript", "C", "C#", "SQL", "HTML", "CSS", "Java", "Dr.Racket", "Haskell"]
+                    tools: ["GoLang", "Python", "Javascript", "C", "C#", "SQL", "HTML", "CSS", "Java", "Dr.Racket", "Haskell"]
                 },
                 {
                     category: "Web Development",
@@ -238,7 +244,11 @@ const contents =
                 },
                 {
                     category: "Database",
-                    tools: ["SSMS", "MongoDB", "PostgreSQL"]
+                    tools: ["SSMS", "MongoDB", "PostgreSQL", "MySQL"]
+                },
+                {
+                    category: "Other",
+                    tools: ["Kubernetes", "AWS", "Temporal", "Terraform", "Metabase", "Retool", "Numpy"]
                 }
             ]
         },
@@ -262,7 +272,7 @@ const contents =
                         detail: "Dean's List Scholar"
                     }, {
                         icon: faCertificate,
-                        detail: "CGPA:3.83/4.00"
+                        detail: "CGPA:3.85/4.00"
                     },
                 ]
             },
