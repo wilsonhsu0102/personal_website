@@ -5,6 +5,8 @@ import { faEnvelope, faSquareRootAlt, faCertificate, faMedal, faGraduationCap, f
 import profilePic1 from './Profile1.png';
 import profilePic2 from './Profile2.jpg';
 import profilePic3 from './Profile3.jpg';
+import profilePic4 from './Profile4.jpeg';
+
 import resume from './Wilson_Hsu_Resume.pdf';
 // Education
 import UofTLogo from './UofTLogo.png';
@@ -12,6 +14,7 @@ import UofTLogo from './UofTLogo.png';
 import rocsautLogo from '../Resources/ROCSAUTLogo.png';
 import ECCCLogo from '../Resources/ECCCLogo.png';
 import CoinbaseLogo from '../Resources/Coinbase.svg.webp';
+import NPMLogo from '../Resources/NPMLogo.png';
 
 // Projects
 import IM1 from '../Resources/IM1.png';
@@ -79,24 +82,24 @@ const contents =
             navText: "Welcome",
             id: "welcome",
             typedText: [
-                "I'm a software developer.",
+                "I'm a software engineer.",
                 "I graduated from UofT.",
-                "I'm open for a FT job."
+                "I'm open for freelancing work."
             ]
         },
         {
             navText: "About me",
             title: "About Me",
             id: "about",
-            profileImgs: [profilePic1, profilePic2, profilePic3],
+            profileImgs: [profilePic1, profilePic4, profilePic2, profilePic3],
             description: "Hi! I am Wilson, welcome to my website and here is a little bit about myself.👨‍💻<br /><br />" +
                 "I graduated from the University of Toronto with a Honour Bachelor of Science degree in Computer " +
-                "Science. I have work experience at Coinbase and Environment and Climate Change Canada.<br /><br />" +
-                "Aside from being a passionate and goal-driven Software Developer, I have decent knowledge on algorithms, data structures, and " +
-                "project experience in areas, such as Promotional content marketplace, Web-scraping Facebook posts, Particle simulation with " +
-                "parallel programming, Crypto car rental app. Currently, I am most interested in learning and working with cloud applications, " +
+                "Science. I have work experience at Nasdaq Private Market, Coinbase and Environment and Climate Change Canada.<br /><br />" +
+                "Aside from being a passionate and goal-driven Software Engineer, I have decent knowledge on algorithms, data structures, and " +
+                "project experience in areas, such as Distributed ledger, Capitalization table, Promotional content marketplace, Web-scraping Facebook posts, Particle simulation with " +
+                "parallel programming, Crypto car rental app. Currently, I am most interested in learning and working with distributed or cloud applications, " +
                 "automation solutions and backend development.<br /><br />" +
-                "Don't hesitate to reach out!🎉"
+                "Don't hesitate to reach out! 🎉"
                 ,
             resume: resume
         },
@@ -201,6 +204,15 @@ const contents =
             id: "experience",
             experiences: [
                 {
+                    title: "Software Engineer II",
+                    companyLogo: NPMLogo,
+                    brief: "Nasdaq Private Market | Remote, North America | Mar. 2023 - Present",
+                    details: [
+                        "Led and integrated distributed ledger service with the existing Core monolithic API, so institutional clients can connect with NPM while keeping all private data on-prem. Completed and presented the MVP internally within 3 months.",
+                        "Optimized and redesigned DACTYL's data models to improve data integrity and refactored all FactoryBot for test writing. Improved list endpoints performance by 10x in the process by profiling SQL queries and indices executed.",
+                        "Ownership for majority of the DevOp work within the team. CI/CD pipeline, dockerized the service, Airflow data ingestion, automated routine database snapshot to S3 bucket, spearheaded the setup for the distributed ledger project."
+                    ]
+                }, {
                     title: "Software Engineer",
                     companyLogo: CoinbaseLogo,
                     brief: "Coinbase | Remote, North America | May. 2022 - Jan. 2023",
@@ -236,7 +248,7 @@ const contents =
             skills: [
                 {
                     category: "Programming Language",
-                    tools: ["GoLang", "Python", "Javascript", "C", "C#", "SQL", "HTML", "CSS", "Java", "Dr.Racket", "Haskell"]
+                    tools: ["Ruby", "Python", "GoLang", "Javascript", "C", "C#", "SQL", "HTML", "CSS", "Java", "Dr.Racket", "Haskell", "DAML"]
                 },
                 {
                     category: "Web Development",
@@ -248,7 +260,7 @@ const contents =
                 },
                 {
                     category: "Other",
-                    tools: ["Kubernetes", "AWS", "Temporal", "Terraform", "Metabase", "Retool", "Numpy"]
+                    tools: ["Kubernetes", "Docker", "AWS", "Airflow", "Datadog", "Temporal", "Terraform", "Metabase", "Retool", "Numpy"]
                 }
             ]
         },
