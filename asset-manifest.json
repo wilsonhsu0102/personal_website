@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/personal_website/static/css/main.e4032fec.css",
-    "main.js": "/personal_website/static/js/main.5f139660.js",
-    "static/js/377.55e8166a.chunk.js": "/personal_website/static/js/377.55e8166a.chunk.js",
+    "main.css": "/personal_website/static/css/main.6af81311.css",
+    "main.js": "/personal_website/static/js/main.49f258ae.js",
+    "static/js/422.c15eb94b.chunk.js": "/personal_website/static/js/422.c15eb94b.chunk.js",
+    "static/media/Profile4.jpeg": "/personal_website/static/media/Profile4.f109c2bc62f255e6ef3d.jpeg",
     "static/media/PW1.png": "/personal_website/static/media/PW1.0724b09ba7d1288b0344.png",
     "static/media/ER1.png": "/personal_website/static/media/ER1.b53100c497f95bc0f08f.png",
     "static/media/wood_bg.jpg": "/personal_website/static/media/wood_bg.ee4759d6d61488160f94.jpg",
@@ -26,7 +27,7 @@
     "static/media/NDTP1.png": "/personal_website/static/media/NDTP1.2e766bda4f09d263f2b3.png",
     "static/media/LO8.gif": "/personal_website/static/media/LO8.663bfe94bb9bb17012c7.gif",
     "static/media/UNI3.png": "/personal_website/static/media/UNI3.5c4eb74e23d27e70eb9e.png",
-    "static/media/Wilson_Hsu_Resume.pdf": "/personal_website/static/media/Wilson_Hsu_Resume.4b4ca3e956440640eb78.pdf",
+    "static/media/Wilson_Hsu_Resume.pdf": "/personal_website/static/media/Wilson_Hsu_Resume.15b1ac6d214b12c1567b.pdf",
     "static/media/ROCSAUTLogo.png": "/personal_website/static/media/ROCSAUTLogo.993f33af4454ebac045c.png",
     "static/media/PW5.png": "/personal_website/static/media/PW5.fbbbd1c3b6a20be3105f.png",
     "static/media/IM3.png": "/personal_website/static/media/IM3.4636ab073843e9822636.png",
@@ -38,13 +39,14 @@
     "static/media/GC1.png": "/personal_website/static/media/GC1.59ae793f54d7b9ee6482.png",
     "static/media/GC2.png": "/personal_website/static/media/GC2.c0291327161c269a832f.png",
     "static/media/Coinbase.svg.webp": "/personal_website/static/media/Coinbase.svg.6b6aa580ff31440da363.webp",
+    "static/media/NPMLogo.png": "/personal_website/static/media/NPMLogo.c05f07841631d897a9a6.png",
     "index.html": "/personal_website/index.html",
-    "main.e4032fec.css.map": "/personal_website/static/css/main.e4032fec.css.map",
-    "main.5f139660.js.map": "/personal_website/static/js/main.5f139660.js.map",
-    "377.55e8166a.chunk.js.map": "/personal_website/static/js/377.55e8166a.chunk.js.map"
+    "main.6af81311.css.map": "/personal_website/static/css/main.6af81311.css.map",
+    "main.49f258ae.js.map": "/personal_website/static/js/main.49f258ae.js.map",
+    "422.c15eb94b.chunk.js.map": "/personal_website/static/js/422.c15eb94b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4032fec.css",
-    "static/js/main.5f139660.js"
+    "static/css/main.6af81311.css",
+    "static/js/main.49f258ae.js"
   ]
 }
