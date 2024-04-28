@@ -235,7 +235,7 @@ const contents =
                     companyLogo: rocsautLogo,
                     brief: "Taiwan (ROC) Student Association at UofT | Toronto, ON | Mar 2019 - Apr. 2020",
                     details: [
-                        "Recruited and lead a team of 8 people to engage in face-to-face meetings, phone calls, email conversations with numerous potential sponsors of the student association.",
+                        "Recruited and led a team of 8 people to engage in face-to-face meetings, phone calls, email conversations with numerous potential sponsors of the student association.",
                         "Evaluated and managed all cash flows for our student association of over 150 active members.",
                         "Profited over $2,000 at the end of the year from sponsors and various events that the student association hosted."
                     ]
