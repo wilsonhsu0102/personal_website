@@ -208,9 +208,9 @@ const contents =
                     companyLogo: NPMLogo,
                     brief: "Nasdaq Private Market | Remote, North America | Mar. 2023 - Present",
                     details: [
-                        "Led and integrated distributed ledger service with the existing Core monolithic API, so institutional clients can connect with NPM while keeping all private data on-prem. Completed and presented the MVP internally within 3 months.",
-                        "Optimized and redesigned DACTYL's data models to improve data integrity and refactored all FactoryBot for test writing. Improved list endpoints performance by 10x in the process by profiling SQL queries and indices executed.",
-                        "Ownership for majority of the DevOp work within the team. CI/CD pipeline, dockerized the service, Airflow data ingestion, automated routine database snapshot to S3 bucket, spearheaded the setup for the distributed ledger project."
+                        "Led and integrated a distributed ledger service with the existing monolithic API to support connecting institutional clients with NPM. Achieved the project milestone and presented the MVP within 3 months.",
+                        "Designed and implemented multiple service-wide refactors to address evolving challenges, such as ingesting holding data from various sources and constructing them into the Open Cap-table Format.",
+                        "Heavily involved in the team's DevOps tasks, including containerizing the application and automating routine database snapshots to, and restorations from, an S3 bucket, which reduced CI/CD pipeline execution time by nearly 60%."
                     ]
                 }, {
                     title: "Software Engineer",
